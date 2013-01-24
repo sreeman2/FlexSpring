@@ -1,0 +1,49 @@
+package flex.jersey.resource;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import flex.ActorMapper;
+import flex.CommodityDictionary;
+
+
+@Path("commodities") // The path by which we access the service
+public class CommodityServicesImpl implements CommodityServices {
+
+	//private CommodityDaoImpl commodityInfo;
+
+	private JdbcTemplate jdbcTemplate;
+
+
+	public void setDataSource(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+
+
+	@Override
+	@GET // The HTTP method by which we access the service
+	@Produces("application/html") // The output MIME Type
+	public List<CommodityDictionary> showCommodities(){
+		List<CommodityDictionary> cc =this.jdbcTemplate.query(
+				" select top 10000 hs.dqa_desc AS DQA_DESC, hs.hscode AS hscode, joc.joc_code As jocCode From Commodity_HSCode_Lib hs join Commodity_jocCode_Lib joc "+
+				" on (hs.dqa_desc = joc.dqa_desc)", new ActorMapper()); 
+		
+		if(cc.size() >0){
+			System.out.println("total size is "+cc.size());
+		}
+		return cc;
+	}
+	
+	
+	/*public void setCommodityInfo(CommodityDaoImpl commodityInfo ){
+		this.commodityInfo = commodityInfo;
+	}*/
+	
+
+}

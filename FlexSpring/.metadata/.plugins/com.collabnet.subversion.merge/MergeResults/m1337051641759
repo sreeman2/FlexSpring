@@ -1,0 +1,18 @@
+:normalEnd:
+project: \search-service-api
+fromUrl: http://10.31.60.177:9090/svn/ti3/tags/3.03d/dev/search-service-api
+toUrl: http://10.31.60.177:9090/svn/ti3/tags/3.03d/dev/search-service-api
+reintegrate: false
+force: false
+recurse: false
+ignore: false
+depth: -2
+Summary result: type: 0 category: Updated number: 2
+
+workspaceUrl: http://10.31.60.177:9090/svn/ti3/branches/3.03c/main/dev/search-service-api
+workspaceRevision: 756
+lowerRevision: 755
+upperRevision: 766
+merge http://10.31.60.177:9090/svn/ti3/tags/3.03d/dev/search-service-api C:/TI3WorkSpace/3.03c/main/dev/search-service-api
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/search-service-api/src/main/java/com/globant/cbm/ti3/search/Category.java
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/search-service-api/src/main/java/com/globant/cbm/ti3/search/Field.java

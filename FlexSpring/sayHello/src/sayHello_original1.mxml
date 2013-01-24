@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" backgroundColor="#FFFFFF" preloaderChromeColor="#CCCCCC" pageTitle="Saibaba">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:RemoteObject id="ro" destination="helloWorldService" endpoint="htpp://localhost:8080/flexspring/messagebroker/amf"/>
+	</fx:Declarations>
+	<s:Label text="Om Sainathayana Maha...." width="282" height="39" id="baba" fontFamily="Times New Roman" fontSize="18" textAlign="center"/>
+	<s:Panel width="456" height="324" backgroundColor="#194E6F">
+		<s:TextInput id="t" x="231" y="68"/>
+		<s:Button label="sayHello" click="ro.sayHello(t.text)" x="232" y="128"/>
+		<s:Label text="{ro.sayHello.lastResult}" x="230" y="98" width="217" height="22"/>
+		
+		<s:TextInput id="emailId" x="39" y="64"/>
+		<s:Button label="personInfo" click="ro.fillPersonData(emailId.text)" x="44" y="124" width="94" height="21"/>
+		<s:Label text="{ro.fillPersonData.lastResult}" x="39" y="94" width="127" height="23"/>
+		<s:Label y="21" text="Om Sainathayana Maha-1" width="180" textAlign="left" height="26" id="Heading" fontSize="14" left="159" horizontalCenter="21"/>
+	</s:Panel>
+
+</s:Application>

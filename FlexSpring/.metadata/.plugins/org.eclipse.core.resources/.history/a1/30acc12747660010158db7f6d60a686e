@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:services="services.*">
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			protected function dataGrid_creationCompleteHandler(event:FlexEvent):void
+			{
+				showAllResult.token = commodityDaoImpl.showAll();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:CallResponder id="showAllResult"/>
+		<services:CommodityDaoImpl id="commodityDaoImpl" fault="Alert.show(event.fault.faultString + '\n' + event.fault.faultDetail)" showBusyCursor="true"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Panel y="88" width="752" height="502" horizontalCenter="-16" title="Commodity Auto Correction">
+		<mx:DataGrid x="261" y="25" width="479" height="415" id="dataGrid" creationComplete="dataGrid_creationCompleteHandler(event)" dataProvider="{showAllResult.lastResult}">
+			<mx:columns>
+				<mx:DataGridColumn headerText="commodityDescription" dataField="commodityDescription"/>
+				<mx:DataGridColumn headerText="jocCode" dataField="jocCode"/>
+				<mx:DataGridColumn headerText="hsCode" dataField="hsCode"/>
+			</mx:columns>
+		</mx:DataGrid>
+	</s:Panel>
+</s:Application>

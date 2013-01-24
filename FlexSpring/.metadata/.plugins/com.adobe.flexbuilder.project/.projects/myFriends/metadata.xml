@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<projectMetadata>
+  <generatedHTMLResources/>
+  <swf bgcolor="ffffff" fullPath="/myFriends/bin-debug/myFriends.swf" height="100%" pageTitle="" width="100%"/>
+<swf bgcolor="ffffff" fullPath="/myFriends/bin-debug/coreTeam.swf" height="100%" pageTitle="" width="100%"/>
+<swf bgcolor="ffffff" fullPath="/myFriends/bin-debug/commodityInformation.swf" height="100%" pageTitle="" width="100%"/>
+<swf bgcolor="ffffff" fullPath="/myFriends/bin-debug/commodityDictionary.swf" height="100%" pageTitle="" width="100%"/>
+<swf bgcolor="ffffff" fullPath="/myFriends/bin-debug/portInformation.swf" height="100%" pageTitle="PortInformation" width="100%"/>
+<swf bgcolor="ffffff" fullPath="/myFriends/bin-debug/portCountryInformation.swf" height="100%" pageTitle="" width="100%"/>
+</projectMetadata>

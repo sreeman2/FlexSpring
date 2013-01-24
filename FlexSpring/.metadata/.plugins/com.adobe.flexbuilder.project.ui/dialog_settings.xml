@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\FlexSpring\flexspring\WebContent" key="com.adobe.flexbuilder.project.ui.last.flexserver.location"/>
+	<item value="false" key="com.adobe.flexbuilder.project.ui.last.flexserver.usedefaults"/>
+	<item value="/flexspring" key="com.adobe.flexbuilder.project.ui.last.flexserver.contextroot"/>
+	<item value="true" key="com.adobe.flexbuilder.project.ui.use.default.location"/>
+	<item value="http://localhost:8080/flexspring" key="com.adobe.flexbuilder.project.ui.last.flexserver.url"/>
+	<item value="true" key="com.adobe.flexbuilder.project.ui.last.apptype"/>
+	<item value="false" key="com.adobe.flexbuilder.project.ui.last.java.uselcds"/>
+	<item value="true" key="com.adobe.flexbuilder.project.ui.last.useremoteobject"/>
+	<item value="" key="com.adobe.flexbuilder.project.ui.last.java.javasrc"/>
+	<item value="false" key="com.adobe.flexbuilder.project.ui.last.usewtp"/>
+	<item value="3" key="com.adobe.flexbuilder.project.ui.last.server.type"/>
+	<section name="com.adobe.flexbuilder.help.ModulesPropertyPage">
+		<item value="125" key="outputSWFColumnWidth"/>
+		<item value="0" key="sortColumnIndex"/>
+		<item value="225" key="moduleColumnWidth"/>
+		<item value="true" key="sortColumnAscending"/>
+		<item value="125" key="optimizeColumnWidth"/>
+	</section>
+	<section name="com.adobe.flexbuilder.help.WorkersPropertyPage">
+	</section>
+</section>

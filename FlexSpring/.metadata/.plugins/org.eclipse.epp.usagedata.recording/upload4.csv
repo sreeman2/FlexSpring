@@ -1,0 +1,301 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Error fetching actionscript project for myFriends",1356632723502
+error,log,,,"Error fetching actionscript project for myFriends",1356632724319
+error,log,,,"Error fetching actionscript project for myFriends",1356632725988
+error,log,,,"Error fetching actionscript project for myFriends",1356632728605
+error,log,,,"Error fetching actionscript project for myFriends",1356632728627
+error,log,,,"Error fetching actionscript project for myFriends",1356632728645
+error,log,,,"Error fetching actionscript project for myFriends",1356632730346
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632744954
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633021107
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633021176
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633023032
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633031493
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633034560
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633054458
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633056330
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633057291
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633059432
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633082519
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633084055
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633101166
+error,log,,,"Error fetching actionscript project for sayHello",1356633104102
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633105006
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633105033
+error,log,,,"Error fetching actionscript project for sayHello",1356633105056
+error,log,,,"Error fetching actionscript project for sayHello",1356633105346
+error,log,,,"Error fetching actionscript project for sayHello",1356633105635
+error,log,,,"Error fetching actionscript project for sayHello",1356633105913
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633106234
+error,log,,,"Error fetching actionscript project for sayHello",1356633106530
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633106544
+error,log,,,"Error fetching actionscript project for sayHello",1356633106567
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jface"".",1356633106568
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633108276
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633108643
+error,log,,,"Error fetching actionscript project for sayHello",1356633108672
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633109176
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633110748
+error,log,,,"Error fetching actionscript project for sayHello",1356633110769
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633112722
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633115081
+error,log,,,"Error fetching actionscript project for myFriends",1356633117601
+started,bundle,com.adobe.flexide.codemodel.bridge,4.7.0.349722,"com.adobe.flexide.codemodel.bridge",1356633119635
+started,bundle,com.adobe.flexbuilder.codemodel,4.7.0.349722,"com.adobe.flexbuilder.codemodel",1356633121734
+started,bundle,com.adobe.flexbuilder.editorcore,4.7.0.349722,"com.adobe.flexbuilder.editorcore",1356633121740
+started,bundle,com.adobe.flexide.as.core,4.7.0.349722,"com.adobe.flexide.as.core",1356633122788
+started,bundle,com.adobe.flexide.mxml.core,4.7.0.349722,"com.adobe.flexide.mxml.core",1356633123100
+started,bundle,com.adobe.flexbuilder.ui,4.7.0.349722,"com.adobe.flexbuilder.ui",1356633144440
+started,bundle,com.adobe.flexbuilder.as.editor,4.7.0.349722,"com.adobe.flexbuilder.as.editor",1356633144497
+started,bundle,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.mxml.editor",1356633144847
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633151272
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633151360
+error,log,,,"Error fetching actionscript project for myFriends",1356633151383
+error,log,,,"Error fetching actionscript project for myFriends",1356633151420
+opened,editor,com.adobe.flexbuilder.project.ui,4.7.0.349722,"com.adobe.flexbuilder.ui.StartPage",1356633162543
+activated,editor,com.adobe.flexbuilder.project.ui,4.7.0.349722,"com.adobe.flexbuilder.ui.StartPage",1356633162723
+error,log,,,"Error fetching actionscript project for myFriends",1356633171153
+error,log,,,"Error fetching actionscript project for myFriends",1356633171233
+error,log,,,"Error fetching actionscript project for sayHello",1356633171253
+error,log,,,"Error fetching actionscript project for myFriends",1356633175166
+started,bundle,com.adobe.flexide.css.core,4.7.0.349722,"com.adobe.flexide.css.core",1356633175366
+error,log,,,"Initializing to Flash Builder locale as Flex SDK Locale not found from flex-config.xml file",1356633175593
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.101.r362_v20101117-0800,"org.eclipse.ltk.core.refactoring",1356633188059
+started,bundle,com.adobe.flexide.refactoring.core,4.7.0.349722,"com.adobe.flexide.refactoring.core",1356633188060
+started,bundle,org.eclipse.ltk.ui.refactoring,3.5.0.v20100526-0800,"org.eclipse.ltk.ui.refactoring",1356633188191
+opened,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633189844
+started,bundle,com.adobe.flexbuilder.crimson,4.7.0.349722,"com.adobe.flexbuilder.crimson",1356633190930
+error,log,,,"Error fetching actionscript project for myFriends",1356633191415
+error,log,,,"Error fetching actionscript project for myFriends",1356633191554
+error,log,,,"Error fetching actionscript project for myFriends",1356633191574
+error,log,,,"Error fetching actionscript project for myFriends",1356633191602
+error,log,,,"Error fetching actionscript project for myFriends",1356633192123
+error,log,,,"Error fetching actionscript project for myFriends",1356633192143
+error,log,,,"Error fetching actionscript project for myFriends",1356633192166
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633192166
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633192416
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633192813
+error,log,,,"Error fetching actionscript project for myFriends",1356633193120
+error,log,,,"Error fetching actionscript project for myFriends",1356633193137
+error,log,,,"Error fetching actionscript project for myFriends",1356633193154
+error,log,,,"Error fetching actionscript project for myFriends",1356633199360
+error,log,,,"Error fetching actionscript project for myFriends",1356633199379
+error,log,,,"Error fetching actionscript project for myFriends",1356633199429
+activated,view,org.eclipse.ui.views,3.5.1.M20110202-0800,"org.eclipse.ui.views.ContentOutline",1356633199430
+error,log,,,"Error fetching actionscript project for myFriends",1356633199513
+error,log,,,"Error fetching actionscript project for myFriends",1356633199532
+error,log,,,"Error fetching actionscript project for myFriends",1356633199551
+error,log,,,"Error fetching actionscript project for myFriends",1356633199573
+error,log,,,"Error fetching actionscript project for myFriends",1356633199590
+error,log,,,"Error fetching actionscript project for myFriends",1356633199607
+error,log,,,"Error fetching actionscript project for myFriends",1356633204039
+error,log,,,"Error fetching actionscript project for myFriends",1356633204058
+error,log,,,"Error fetching actionscript project for myFriends",1356633204078
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356633204080
+error,log,,,"Error fetching actionscript project for myFriends",1356633204107
+error,log,,,"Error fetching actionscript project for myFriends",1356633204126
+error,log,,,"Error fetching actionscript project for myFriends",1356633204144
+error,log,,,"Error fetching actionscript project for myFriends",1356633204172
+error,log,,,"Error fetching actionscript project for myFriends",1356633204263
+error,log,,,"Error fetching actionscript project for myFriends",1356633204281
+error,log,,,"Error fetching actionscript project for myFriends",1356633204299
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633204301
+error,log,,,"Error fetching actionscript project for myFriends",1356633204573
+error,log,,,"Error fetching actionscript project for myFriends",1356633210522
+error,log,,,"Error fetching actionscript project for myFriends",1356633210540
+error,log,,,"Error fetching actionscript project for myFriends",1356633210559
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356633210561
+error,log,,,"Error fetching actionscript project for myFriends",1356633211069
+error,log,,,"Error fetching actionscript project for myFriends",1356633211091
+error,log,,,"Error fetching actionscript project for myFriends",1356633211111
+error,log,,,"Error fetching actionscript project for myFriends",1356633211129
+error,log,,,"Error fetching actionscript project for myFriends",1356633211147
+error,log,,,"Error fetching actionscript project for myFriends",1356633213620
+error,log,,,"Error fetching actionscript project for myFriends",1356633213638
+error,log,,,"Error fetching actionscript project for myFriends",1356633213655
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633213656
+error,log,,,"Error fetching actionscript project for myFriends",1356633216645
+error,log,,,"Error fetching actionscript project for myFriends",1356633216664
+error,log,,,"Error fetching actionscript project for myFriends",1356633216682
+activated,view,org.eclipse.ui.views,3.5.1.M20110202-0800,"org.eclipse.ui.views.ContentOutline",1356633216682
+error,log,,,"Error fetching actionscript project for myFriends",1356633216702
+error,log,,,"Error fetching actionscript project for myFriends",1356633216721
+error,log,,,"Error fetching actionscript project for myFriends",1356633216740
+error,log,,,"Error fetching actionscript project for myFriends",1356633216761
+error,log,,,"Error fetching actionscript project for myFriends",1356633216778
+error,log,,,"Error fetching actionscript project for myFriends",1356633216796
+error,log,,,"Error fetching actionscript project for myFriends",1356633222845
+error,log,,,"Error fetching actionscript project for myFriends",1356633222871
+error,log,,,"Error fetching actionscript project for myFriends",1356633222890
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356633222892
+error,log,,,"Error fetching actionscript project for myFriends",1356633222978
+error,log,,,"Error fetching actionscript project for myFriends",1356633222995
+error,log,,,"Error fetching actionscript project for myFriends",1356633223013
+error,log,,,"Error fetching actionscript project for myFriends",1356633223043
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633223143
+error,log,,,"Error fetching actionscript project for myFriends",1356633223183
+error,log,,,"Error fetching actionscript project for myFriends",1356633223233
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633223250
+error,log,,,"Error fetching actionscript project for myFriends",1356633223270
+error,log,,,"Error fetching actionscript project for sayHello",1356633223289
+error,log,,,"Error fetching actionscript project for myFriends",1356633223915
+error,log,,,"Error fetching actionscript project for myFriends",1356633223934
+opened,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633223981
+error,log,,,"Error fetching actionscript project for myFriends",1356633224049
+error,log,,,"Error fetching actionscript project for myFriends",1356633224595
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.ui.workbench"".",1356633224885
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633224901
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633224947
+error,log,,,"Error fetching actionscript project for myFriends",1356633224979
+error,log,,,"Error fetching actionscript project for myFriends",1356633224997
+error,log,,,"Error fetching actionscript project for myFriends",1356633225016
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633225016
+error,log,,,"Error fetching actionscript project for myFriends",1356633225069
+error,log,,,"Error fetching actionscript project for myFriends",1356633225091
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.ui.workbench"".",1356633225094
+error,log,,,"Error fetching actionscript project for myFriends",1356633225264
+error,log,,,"Error fetching actionscript project for myFriends",1356633225282
+error,log,,,"Error fetching actionscript project for myFriends",1356633225302
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633227685
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633235757
+error,log,,,"Unexpected runtime error while computing a text hover",1356633236655
+error,log,,,"Error fetching actionscript project for myFriends",1356633242813
+error,log,,,"Error fetching actionscript project for myFriends",1356633242831
+error,log,,,"Error fetching actionscript project for myFriends",1356633242850
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633242850
+closed,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633242851
+error,log,,,"Error fetching actionscript project for myFriends",1356633250438
+error,log,,,"Error fetching actionscript project for myFriends",1356633250458
+error,log,,,"Error fetching actionscript project for myFriends",1356633250476
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356633250477
+error,log,,,"Error fetching actionscript project for myFriends",1356633251383
+error,log,,,"Error fetching actionscript project for myFriends",1356633251400
+error,log,,,"Error fetching actionscript project for myFriends",1356633251425
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633256699
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633289534
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633292191
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633338949
+error,log,,,"Error fetching actionscript project for myFriends",1356633343523
+error,log,,,"Error fetching actionscript project for myFriends",1356633343545
+error,log,,,"Error fetching actionscript project for myFriends",1356633343565
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633343566
+error,log,,,"Error fetching actionscript project for myFriends",1356633349868
+error,log,,,"Error fetching actionscript project for myFriends",1356633349894
+error,log,,,"Error fetching actionscript project for myFriends",1356633349924
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356633349925
+error,log,,,"Error fetching actionscript project for myFriends",1356633353868
+error,log,,,"Error fetching actionscript project for myFriends",1356633357757
+error,log,,,"Error fetching actionscript project for myFriends",1356633357778
+error,log,,,"Error fetching actionscript project for myFriends",1356633357796
+error,log,,,"Error fetching actionscript project for myFriends",1356633359007
+error,log,,,"Error fetching actionscript project for myFriends",1356633359028
+error,log,,,"Error fetching actionscript project for myFriends",1356633359051
+error,log,,,"Error fetching actionscript project for myFriends",1356633359070
+error,log,,,"Error fetching actionscript project for myFriends",1356633359089
+opened,editor,org.eclipse.ui.browser,3.3.1.r36_20101216,"org.eclipse.ui.browser.editor",1356633367151
+activated,editor,org.eclipse.ui.browser,3.3.1.r36_20101216,"org.eclipse.ui.browser.editor",1356633367204
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.copy",1356633374962
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.copy",1356633380961
+error,log,,,"Error fetching actionscript project for myFriends",1356633382663
+error,log,,,"Error fetching actionscript project for myFriends",1356633382695
+error,log,,,"Error fetching actionscript project for myFriends",1356633382727
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633382727
+closed,editor,org.eclipse.ui.browser,3.3.1.r36_20101216,"org.eclipse.ui.browser.editor",1356633382727
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633383160
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633452864
+error,log,,,"Error fetching actionscript project for myFriends",1356633454131
+error,log,,,"Error fetching actionscript project for myFriends",1356633454162
+error,log,,,"Error fetching actionscript project for myFriends",1356633454193
+error,log,,,"Error fetching actionscript project for myFriends",1356633454224
+error,log,,,"Error fetching actionscript project for myFriends",1356633454255
+error,log,,,"Error fetching actionscript project for myFriends",1356633454286
+error,log,,,"Error fetching actionscript project for myFriends",1356633455163
+error,log,,,"Error fetching actionscript project for myFriends",1356633455195
+error,log,,,"Error fetching actionscript project for myFriends",1356633455229
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356633455232
+error,log,,,"Error fetching actionscript project for myFriends",1356633455340
+error,log,,,"Error fetching actionscript project for myFriends",1356633455371
+error,log,,,"Error fetching actionscript project for myFriends",1356633455404
+error,log,,,"Error fetching actionscript project for myFriends",1356633455451
+error,log,,,"Error fetching actionscript project for myFriends",1356633455482
+opened,editor,org.eclipse.ui.browser,3.3.1.r36_20101216,"org.eclipse.ui.browser.editor",1356633460954
+activated,editor,org.eclipse.ui.browser,3.3.1.r36_20101216,"org.eclipse.ui.browser.editor",1356633461023
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.copy",1356633467617
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633468520
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633496906
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356633502996
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633504647
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633508216
+activated,editor,org.eclipse.ui.browser,3.3.1.r36_20101216,"org.eclipse.ui.browser.editor",1356633508404
+error,log,,,"Error fetching actionscript project for myFriends",1356633508619
+error,log,,,"Error fetching actionscript project for myFriends",1356633508666
+error,log,,,"Error fetching actionscript project for myFriends",1356633508708
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633508709
+closed,editor,org.eclipse.ui.browser,3.3.1.r36_20101216,"org.eclipse.ui.browser.editor",1356633508709
+error,log,,,"Error fetching actionscript project for myFriends",1356633510531
+error,log,,,"Error fetching actionscript project for myFriends",1356633510609
+error,log,,,"Error fetching actionscript project for myFriends",1356633510665
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1356633510666
+error,log,,,"Error fetching actionscript project for myFriends",1356633511450
+error,log,,,"Error fetching actionscript project for myFriends",1356633511492
+error,log,,,"Error fetching actionscript project for myFriends",1356633511542
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633513043
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633557753
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633565120
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633566392
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633569783
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633578275
+error,log,,,"Unexpected runtime error while computing a text hover",1356633580037
+error,log,,,"Unexpected runtime error while computing a text hover",1356633581945
+error,log,,,"Error fetching actionscript project for myFriends",1356633584385
+error,log,,,"Error fetching actionscript project for myFriends",1356633584588
+error,log,,,"Error fetching actionscript project for myFriends",1356633584624
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356633584625
+error,log,,,"Error fetching actionscript project for sayHello",1356633584672
+error,log,,,"Error fetching actionscript project for sayHello",1356633586777
+error,log,,,"Error fetching actionscript project for myFriends",1356633593229
+error,log,,,"Error fetching actionscript project for myFriends",1356633593263
+error,log,,,"Error fetching actionscript project for myFriends",1356633593301
+error,log,,,"Error fetching actionscript project for myFriends",1356633593493
+error,log,,,"Error fetching actionscript project for myFriends",1356633593529
+error,log,,,"Error fetching actionscript project for myFriends",1356633593571
+error,log,,,"Error fetching actionscript project for myFriends",1356633593602
+error,log,,,"Error fetching actionscript project for myFriends",1356633593640
+error,log,,,"Error fetching actionscript project for myFriends",1356633599162
+error,log,,,"Error fetching actionscript project for myFriends",1356633599199
+error,log,,,"Error fetching actionscript project for myFriends",1356633599233
+error,log,,,"Error fetching actionscript project for myFriends",1356633605617
+error,log,,,"Error fetching actionscript project for myFriends",1356633605651
+error,log,,,"Error fetching actionscript project for myFriends",1356633605685
+error,log,,,"Error fetching actionscript project for myFriends",1356633605758
+error,log,,,"Error fetching actionscript project for myFriends",1356633605814
+error,log,,,"Error fetching actionscript project for myFriends",1356633605854
+error,log,,,"Error fetching actionscript project for myFriends",1356633605889
+error,log,,,"Error fetching actionscript project for myFriends",1356633605941
+error,log,,,"Error fetching actionscript project for myFriends",1356633605974
+error,log,,,"Error fetching actionscript project for myFriends",1356633606162
+error,log,,,"Error fetching actionscript project for myFriends",1356633612761
+error,log,,,"Error fetching actionscript project for myFriends",1356633618279
+error,log,,,"Error fetching actionscript project for myFriends",1356633618310
+error,log,,,"Error fetching actionscript project for myFriends",1356633618340
+error,log,,,"Error fetching actionscript project for myFriends",1356633618463
+error,log,,,"Error fetching actionscript project for myFriends",1356633618494
+error,log,,,"Error fetching actionscript project for myFriends",1356633618527
+error,log,,,"Error fetching actionscript project for myFriends",1356633618558
+error,log,,,"Error fetching actionscript project for myFriends",1356633618588
+error,log,,,"Error fetching actionscript project for myFriends",1356633619676
+error,log,,,"Error fetching actionscript project for myFriends",1356633620134
+error,log,,,"Error fetching actionscript project for myFriends",1356633621110
+error,log,,,"Error fetching actionscript project for myFriends",1356633628269
+error,log,,,"Error fetching actionscript project for myFriends",1356633628301
+error,log,,,"Error fetching actionscript project for myFriends",1356633628324
+activated,editor,com.adobe.flexbuilder.mxml.editor,4.7.0.349722,"com.adobe.flexbuilder.editors.mxml.MXMLEditor",1356633628325
+error,log,,,"Error fetching actionscript project for myFriends",1356633628363
+error,log,,,"Error fetching actionscript project for myFriends",1356633628387
+error,log,,,"Error fetching actionscript project for myFriends",1356633628534
+error,log,,,"Error fetching actionscript project for myFriends",1356633628566
+error,log,,,"Error fetching actionscript project for myFriends",1356633628595
+error,log,,,"Error fetching actionscript project for myFriends",1356633628620
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633631410
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356633652988
+error,log,,,"Error fetching actionscript project for myFriends",1356633653105

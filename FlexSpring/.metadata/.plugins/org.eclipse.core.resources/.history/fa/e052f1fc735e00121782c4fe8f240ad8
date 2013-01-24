@@ -1,0 +1,146 @@
+package flex.jersey.resource;
+
+import java.util.Iterator;
+import java.util.List;
+
+import javax.sql.DataSource;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+import org.apache.log4j.Logger;
+import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
+//import org.springframework.context.ApplicationContext;
+//import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+import com.sun.jersey.api.core.InjectParam;
+
+//import flex.CommodityActorMapper;
+import flex.CommodityDictionary;
+//import flex.dao.CommodityBean;
+import flex.dao.CommodityDaoImpl;
+import flexjson.JSONSerializer;
+
+@Component
+@Path("commodities") // The path by which we access the service
+
+public class CommodityServicesImpl implements ICommodityServices {
+	Logger logger = Logger.getLogger(CommodityServicesImpl.class);
+public JdbcTemplate jdbcTemplate;
+	
+@InjectParam
+CommodityDaoImpl commodityDaoImpl;
+
+
+
+private DataSource dataSource;
+	
+@Autowired	
+public void setDataSource(DataSource dataSource) {
+	this.jdbcTemplate = new JdbcTemplate(dataSource);
+		this.dataSource = dataSource;
+	}
+
+@Override
+@GET // The HTTP method by which we access the service
+//@Produces("application/html") // The output MIME Type
+@Produces("application/json") // The output MIME Type
+public String showCommodities(){
+
+	logger.debug("Only invoking the Show commodities Method "+ commodityDaoImpl.toString());
+
+	/*	BasicDataSource ds = new BasicDataSource();
+     ds.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+     ds.setUrl("jdbc:sqlserver://10.31.18.132:1433;databasename=SCREEN_TEST");
+     ds.setUsername("appuser");
+    ds.setPassword("bizdev02");
+	 */    
+	BasicDataSource ds = new BasicDataSource();
+	ds.setDriverClassName("com.mysql.jdbc.Driver");
+	ds.setUrl("jdbc:mysql://localhost:3306/Screen_test");
+	ds.setUsername("root");
+	ds.setPassword("Omsairam");
+
+this.dataSource = ds;
+	logger.debug(" Invoking to create a MySQL connection ...");
+	commodityDaoImpl.setDataSource(this.dataSource);
+	logger.debug(" MYSQL connect established ...1 ");
+
+	List<CommodityDictionary> testValue = commodityDaoImpl.showAll1();
+	logger.debug(" Ended querying MYSQL database ");
+
+	JSONSerializer json = new JSONSerializer();
+	if (testValue.size()>0){
+		return 	json.exclude("class").serialize(testValue);
+	}
+	return "<B>Hello Commodity "+" 2  "+testValue.size()+"</B>";
+}
+
+
+
+@GET
+@Produces("application/json")
+@Path("/asjson/{name}/")
+public String getTimeOfTheDayInJSON(@PathParam("name") String name) {
+	
+	logger.debug("here the commodityDaoImpl is not null "+"Name ="+name+ commodityDaoImpl.toString());
+	 
+		BasicDataSource ds = new BasicDataSource();
+	    ds.setDriverClassName("com.mysql.jdbc.Driver");
+	    ds.setUrl("jdbc:mysql://localhost:3306/Screen_test");
+	    ds.setUsername("root");
+	   ds.setPassword("Omsairam");
+		
+	    this.dataSource = ds;
+	   logger.debug(" Invoking to create a MySQL connection ...");
+		commodityDaoImpl.setDataSource(this.dataSource);
+		logger.debug(" MYSQL connect established ...1 ");
+		
+		List<CommodityDictionary> testValue = commodityDaoImpl.showAll1();
+		logger.debug(" Ended querying MYSQL database ");
+		
+		JSONSerializer json = new JSONSerializer();
+		if (testValue.size()>0){
+			return 	json.exclude("class").serialize(testValue);
+		}
+		return "<B>Hello Commodity "+" 2  "+testValue.size()+"</B>";
+		//return "showing Showbean";
+	
+	
+   /* SimpleDateFormat df = new SimpleDateFormat(PATTERN);
+    Time t = new Time();
+    t.setName(name);
+    t.setTime(df.format(Calendar.getInstance().getTime()));*/
+    //return t;
+}
+
+	/*
+	 * @Override
+	@GET // The HTTP method by which we access the service
+	@Produces("application/html") // The output MIME Type
+	public String showCommodities(){
+		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		List<CommodityDictionary> cc =jdbcTemplate.query(
+				" select top 10000 hs.dqa_desc AS DQA_DESC, hs.hscode AS hscode, joc.joc_code As jocCode From Commodity_HSCode_Lib hs join Commodity_jocCode_Lib joc "+
+				" on (hs.dqa_desc = joc.dqa_desc)", new CommodityActorMapper()); 
+		
+		if(cc.size() >0){
+			System.out.println("total size is "+cc.size());
+		}
+		return "tal set otota"+cc.size();
+		commodityBean.toString();
+		return "<B>Hello Commodity "+" 2  "+commodityBean.showBean()+"</B>";
+	}*/
+	
+	
+	/*public void setCommodityInfo(CommodityDaoImpl commodityInfo ){
+		this.commodityInfo = commodityInfo;
+	}*/
+	
+
+}

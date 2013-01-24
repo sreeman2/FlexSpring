@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" pageTitle="PortInformation" xmlns:portlibrary="services.portlibrary.*">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			protected function dataGrid_creationCompleteHandler(event:FlexEvent):void
+			{
+				portlibraryResult.token = portlibrary.portlibrary();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:CallResponder id="portlibraryResult"/>
+		<portlibrary:Portlibrary id="portlibrary" fault="Alert.show(event.fault.faultString + '\n' + event.fault.faultDetail)" showBusyCursor="true"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Panel x="76" y="98" width="661" height="467">
+		<mx:DataGrid y="43" width="605" id="dataGrid" creationComplete="dataGrid_creationCompleteHandler(event)" dataProvider="{portlibraryResult.lastResult}" horizontalCenter="-4" height="364">
+			<mx:columns>
+				<mx:DataGridColumn headerText="refScheduleDId" dataField="refScheduleDId"/>
+				<mx:DataGridColumn headerText="portCode" dataField="portCode"/>
+				<mx:DataGridColumn headerText="portHashValue" dataField="portHashValue"/>
+				<mx:DataGridColumn headerText="refScheduleKId" dataField="refScheduleKId"/>
+				<mx:DataGridColumn headerText="portName" dataField="portName"/>
+				<mx:DataGridColumn headerText="portId" dataField="portId"/>
+			</mx:columns>
+		</mx:DataGrid>
+	</s:Panel>
+</s:Application>

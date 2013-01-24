@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:services="services.*">
+	<fx:Style source="commodityInformation.css"/>
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			protected function dataGrid_creationCompleteHandler(event:FlexEvent=null):void
+			{
+				getCommoditiesResult.token = commodityService.getCommodities();
+			}
+			
+			
+			protected function button_clickHandler(event:MouseEvent):void
+			{
+				createCommodityResult.token = commodityService.createCommodity(arg0TextInput.text,arg1TextInput.text,arg2TextInput.text);
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:CallResponder id="getCommoditiesResult"/>
+		<services:CommodityService id="commodityService" endpoint="http://localhost:8080/flexspring/messagebroker/amf"/>
+		<s:CallResponder id="createCommodityResult" result="dataGrid_creationCompleteHandler()"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Panel x="10" y="18" width="686" height="565" title="Commodity Information">
+		<mx:Form defaultButton="{button}" x="126" y="60">
+			<mx:FormItem label="commodity">
+				<s:TextInput id="arg0TextInput"/>
+			</mx:FormItem>
+			<mx:FormItem label="hsCode">
+				<s:TextInput id="arg1TextInput"/>
+			</mx:FormItem>
+			<mx:FormItem label="jocCode">
+				<s:TextInput id="arg2TextInput"/>
+			</mx:FormItem>
+			<s:Button label="CreateCommodity" id="button" click="button_clickHandler(event)"/>
+		</mx:Form>
+		<mx:DataGrid x="126" y="221" width="446" height="287" id="dataGrid" creationComplete="dataGrid_creationCompleteHandler(event)" dataProvider="{getCommoditiesResult.lastResult}" enabled="true" editable="true">
+			<mx:columns>
+				<mx:DataGridColumn headerText="id" dataField="id" fontFamily="Arial"/>
+				<mx:DataGridColumn headerText="commodityDescription" dataField="commodityDescription"/>
+				<mx:DataGridColumn headerText="harmonizedCode" dataField="harmonizedCode" dataTipField="harmonizedCode" editable="true"/>
+				<mx:DataGridColumn headerText="jocCode" dataField="jocCode"/>
+			</mx:columns>
+		</mx:DataGrid>
+		<s:Label x="150" text="Commodity Information Screen&#xd;&#xd;" width="396" height="42" y="7"/>
+	</s:Panel>
+</s:Application>

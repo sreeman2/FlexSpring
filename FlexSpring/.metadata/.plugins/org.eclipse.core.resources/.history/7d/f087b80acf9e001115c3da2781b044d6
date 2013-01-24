@@ -1,0 +1,32 @@
+package com.globant.cbm.ti3.security;
+
+import org.acegisecurity.Authentication;
+import org.acegisecurity.ConfigAttributeDefinition;
+
+import com.globant.cbm.ti3.integration.SubscriptionInformationAccessor;
+
+/**
+ * Class that determines if the logged user can make advanced searches
+ * @author oscar.lopez
+ *
+ */
+public class RestrictAvancedSearch extends AbstractFilterInvocationSecurityRule {
+
+	public RestrictAvancedSearch(
+			SubscriptionInformationAccessor subscriptionAccessor) {
+		super(subscriptionAccessor);
+	}
+
+	public int vote(final Authentication authentication, final Object object,
+		      final ConfigAttributeDefinition config) {
+		if (!supports(config)) {
+			return ACCESS_ABSTAIN;
+		}
+		String username = extractUsername(authentication);
+		if (getAdminAccessor().isPrimaryServiceLevel(username)) {
+			return ACCESS_DENIED;
+		}
+		return ACCESS_GRANTED;
+	}
+
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syncparticipants>
+<participant displayName="SVN (/jasperserver-integration, /report-service-api, /report-service-impl, /search-service-api, /search-service-impl, /text-index-api, /text-index-impl, /ti-db-commons, /ti3-style, /ti3-web)" id="org.tigris.subversion.subclipse.participant" secondary_id="1342557710382">
+<data root="false">
+<org.eclipse.team.ui.TEAMSUBSRCIBERSETTINGS org.eclipse.team.ui.SCOPE_TYPE="ResourceScope">
+<org.eclipse.team.ui.TEAMSUBSRCIBER_REFRESHSCHEDULE org.eclipse.team.ui.CTX_REFRESHSCHEDULE_ENABLED="false" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_INTERVAL="3600" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_RUNONCE="false"/>
+<resource_scope_roots resource_scope_root_resource="/jasperserver-integration"/>
+<resource_scope_roots resource_scope_root_resource="/report-service-api"/>
+<resource_scope_roots resource_scope_root_resource="/report-service-impl"/>
+<resource_scope_roots resource_scope_root_resource="/search-service-api"/>
+<resource_scope_roots resource_scope_root_resource="/search-service-impl"/>
+<resource_scope_roots resource_scope_root_resource="/text-index-api"/>
+<resource_scope_roots resource_scope_root_resource="/text-index-impl"/>
+<resource_scope_roots resource_scope_root_resource="/ti-db-commons"/>
+<resource_scope_roots resource_scope_root_resource="/ti3-style"/>
+<resource_scope_roots resource_scope_root_resource="/ti3-web"/>
+</org.eclipse.team.ui.TEAMSUBSRCIBERSETTINGS>
+</data>
+</participant>
+</syncparticipants>

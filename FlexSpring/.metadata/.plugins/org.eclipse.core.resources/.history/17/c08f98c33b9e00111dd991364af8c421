@@ -1,0 +1,157 @@
+package com.globant.cbm.ti3.search;
+
+import java.io.Serializable;
+import java.util.List;
+
+import org.apache.commons.lang.Validate;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+
+/**
+ * This class describes a category, wich consists in a name for the category
+ * and a list of field that belong to it.
+ * @since Apr 15, 2008
+ * @author: mfangio
+ */
+public class Category implements Serializable {
+
+  /**
+   * Serial version UID.
+   */
+  private static final long serialVersionUID = -3679015806434359434L;
+
+  /**
+   * Initial odd for hash code builder.
+   */
+  private static final int INITIAL_ODD = 31;
+
+  /**
+   * Multiplier odd for hash code builder.
+   */
+  private static final int MULTIPLIER_ODD = 37;
+
+  /**
+   * The id attribute.
+   */
+  private Long id;
+
+  /**
+   * The name attribute.
+   */
+  private String name;
+
+  /**
+   * The fieldList attribute.
+   */
+  private List<Field> fieldList;
+  
+  private boolean disableAllFields;
+  
+  private boolean canSearchWithoutCriteria;
+
+  /**
+   * Full constructor.
+   * @param theId
+   *          the id.
+   * @param theName
+   *          the name.
+   * @param theFieldList
+   *          the fl.
+   */
+  public Category(final Long theId, final String theName,
+      final List<Field> theFieldList) {
+    Validate.notNull(theId);
+    Validate.notNull(theName);
+    this.id = theId;
+    this.name = theName;
+    this.fieldList = theFieldList;
+  }
+
+  /**
+   * Equals operator.
+   * @param obj
+   *          the object to compare to.
+   * @return boolean.
+   */
+  @Override
+  public boolean equals(final Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (!(obj instanceof Category)) {
+      return false;
+    }
+    final Category other = (Category) obj;
+    return id.equals(other.id) && name.equals(other.name)
+        && fieldList.equals(other.fieldList);
+  }
+
+  /**
+   * Hashcode generator.
+   * @see java.lang.Object#hashCode()
+   * @return int hashcode.
+   */
+  @Override
+  public int hashCode() {
+    HashCodeBuilder builder = new HashCodeBuilder(INITIAL_ODD, MULTIPLIER_ODD);
+    builder.append(id).append(name).append(fieldList);
+    return builder.toHashCode();
+  }
+
+  /**
+   * Get fieldList attribute.
+   * @return List<Field/> fieldList.
+   */
+  public List<Field> getFieldList() {
+    return fieldList;
+  }
+
+  /**
+   * Get id attribute.
+   * @return Object id.
+   */
+  public Long getId() {
+    return id;
+  }
+
+  /**
+   * Get name attribute.
+   * @return String name.
+   */
+  public String getName() {
+    return name;
+  }
+
+  /**
+   * fieldList Setter.
+   * @param theFieldList
+   *          the fieldList to set.
+   */
+  public void setFieldList(final List<Field> theFieldList) {
+    this.fieldList = theFieldList;
+  }
+
+  /**
+   * Returns a string representation of this category.
+   * @return A human readable string, never null.
+   */
+  public String toString() {
+    return "Category " + name;
+  }
+
+	public boolean isDisableAllFields() {
+		return disableAllFields;
+	}
+
+	public void setDisableAllFields(boolean disableAllFields) {
+		this.disableAllFields = disableAllFields;
+	}
+
+	public boolean isCanSearchWithoutCriteria() {
+		return canSearchWithoutCriteria;
+	}
+
+	public void setCanSearchWithoutCriteria(boolean canSearchWithoutCriteria) {
+		this.canSearchWithoutCriteria = canSearchWithoutCriteria;
+	}
+  
+}

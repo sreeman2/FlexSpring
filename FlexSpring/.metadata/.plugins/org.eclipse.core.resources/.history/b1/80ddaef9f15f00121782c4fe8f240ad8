@@ -1,0 +1,101 @@
+/**
+ * 
+ */
+package flex.jersey.resource;
+
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+import org.apache.log4j.Logger;
+
+import com.sun.jersey.api.core.InjectParam;
+
+import flex.dao.PortDaoImpl;
+import flex.jersey.PortLibraryBean;
+import flexjson.JSONSerializer;
+
+//
+
+/**
+ * @author skasi
+ *
+ */
+@Path("portlibrary/{username}") // The path by which we access the service
+public class PortServiceImpl implements IPortService {
+
+	private static Logger  logger = Logger.getLogger(PortServiceImpl.class);
+		
+	
+	@InjectParam
+	PortDaoImpl portDaoImpl;
+	
+	/* (non-Javadoc)
+	 * @see flex.jersey.resource.IPortService#showAll()
+	 */
+	@Override
+	@GET // The HTTP method by which we access the service
+	@Produces("application/json") // The output MIME Type
+	public String showAll1(@PathParam("username") String userName) {
+		// TODO Auto-generated method stub
+		
+		logger.debug("log2"+portDaoImpl);
+		
+  
+		logger.debug("messages logging now....");
+
+		List<PortLibraryBean> testValue = portDaoImpl.showAll();
+		
+		JSONSerializer json = new JSONSerializer();
+		String outputStr =""; 
+		if (testValue.size()>0){
+			//logger.trace("log3");
+			 outputStr=json.exclude("class").serialize(testValue);
+		}
+	   
+		return outputStr;
+		
+	}
+
+	@Override
+	@POST
+	@Consumes
+	public String createPort(@PathParam("portCode")  String portCode, @PathParam("portName")  String portName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	/* Working code for returning port
+	 * @Override
+	 * @GET // The HTTP method by which we access the service
+	@Produces("application/json") // The output MIME Type
+	public String showAll() {
+		// TODO Auto-generated method stub
+		
+		BasicDataSource ds = new BasicDataSource();
+	     ds.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+	     ds.setUrl("jdbc:sqlserver://10.31.18.132:1433;databasename=GTCore_Staging");
+	     ds.setUsername("appuser");
+	    ds.setPassword("bizdev02");
+	    
+		
+	   portDaoImpl.setDataSource(ds);
+		List<PortLibraryBean> testValue = portDaoImpl.showAll();
+		int total =testValue.size();
+		
+		JSONSerializer json = new JSONSerializer();
+		String outputStr =""; 
+		if (testValue.size()>0){
+			 outputStr=json.exclude("class").serialize(testValue);
+		}
+		return outputStr;
+		
+	}*/
+
+}

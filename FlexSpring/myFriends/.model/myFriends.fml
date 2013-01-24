@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model xmlns="http://ns.adobe.com/Fiber/1.0">
+  <annotation name="ActionScriptGeneration">
+    <item name="FullyQualifyReferences">true</item>
+  </annotation>
+  <service name="FriendService">
+    <annotation name="ActionScriptGeneration">
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services</item>
+      <item name="Destination">friendService</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="contextRoot">/flexspring</item>
+      <item name="rootUrl">http://localhost:8080/flexspring</item>
+      <item name="LINKED_FILE"></item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8080/flexspring/messagebroker/amf</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">BlazeDS</item>
+    </annotation>
+    <function name="getFriends" return-type="Friend[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">Friend</item>
+      </annotation>
+    </function>
+    <function name="createFriend" arguments="arg0:string" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">string</item>
+      </annotation>
+    </function>
+  </service>
+  <entity name="Friend">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Friend</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">flex.Friend</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">FriendService</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="id" type="string"/>
+    <property name="name" type="string"/>
+  </entity>
+  <service name="CommodityService">
+    <annotation name="ActionScriptGeneration">
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services</item>
+      <item name="Destination">commodityService</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="contextRoot">/flexspring</item>
+      <item name="rootUrl">http://localhost:8080/flexspring</item>
+      <item name="LINKED_FILE"></item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8080/flexspring/messagebroker/amf</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">BlazeDS</item>
+    </annotation>
+    <function name="getCommodities" return-type="Commodity[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">Commodity</item>
+      </annotation>
+    </function>
+    <function name="createCommodity" arguments="arg0:string,arg1:string,arg2:string" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">string,string,string</item>
+      </annotation>
+    </function>
+  </service>
+  <entity name="Commodity">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Commodity</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">flex.Commodity</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">CommodityService</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="id" type="integer"/>
+    <property name="jocCode" type="string"/>
+    <property name="commodityDescription" type="string"/>
+    <property name="harmonizedCode" type="string"/>
+  </entity>
+  <service name="CommodityDaoImpl">
+    <annotation name="ActionScriptGeneration">
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services</item>
+      <item name="Destination">commodityDaoImpl</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="contextRoot">/flexspring</item>
+      <item name="rootUrl">http://localhost:8080/flexspring</item>
+      <item name="LINKED_FILE"></item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8080/flexspring/messagebroker/amf</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">BlazeDS</item>
+    </annotation>
+    <function name="showAll" return-type="CommodityDictionary[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">CommodityDictionary</item>
+      </annotation>
+    </function>
+    <function name="createCommodity" arguments="arg0:string,arg1:string,arg2:string" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">string,string,string</item>
+      </annotation>
+    </function>
+  </service>
+  <entity name="CommodityDictionary">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">CommodityDictionary</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">flex.CommodityDictionary</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">CommodityDaoImpl</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="jocCode" type="string"/>
+    <property name="commodityDescription" type="string"/>
+    <property name="hsCode" type="string"/>
+  </entity>
+  <service name="Portlibrary">
+    <annotation name="ActionScriptGeneration">
+      <item name="ServiceType">HTTPMultiService</item>
+      <item name="Package">services.portlibrary</item>
+      <item name="rootURL"></item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">HTTPService</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="LINKED_FILE"></item>
+    </annotation>
+    <function name="portlibrary" return-type="NoName1[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="ActionScriptGeneration">
+        <item name="SerializationFilter">com.adobe.serializers.json.JSONSerializationFilter</item>
+        <item name="method">GET</item>
+        <item name="url">http://localhost:8080/flexspring/jersey/portlibrary/Omsairam</item>
+      </annotation>
+      <annotation name="url group">
+        <item name="completeURL">http://localhost:8080/flexspring/jersey/portlibrary/Omsairam</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">refScheduleDId,portCode,portHashValue,refScheduleKId,portName,portId</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+  </service>
+  <entity name="NoName1">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">NoName1</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">Portlibrary</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="portlibrary">
+      <item name="propertySpecifier">refScheduleDId,portCode,portHashValue,refScheduleKId,portName,portId</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="refScheduleDId" type="string" required="true"/>
+    <property name="portCode" type="string" required="true"/>
+    <property name="portHashValue" type="string" required="true"/>
+    <property name="refScheduleKId" type="string" required="true"/>
+    <property name="portName" type="string" required="true"/>
+    <property name="portId" type="string" required="true"/>
+  </entity>
+  <service name="Portcontry">
+    <annotation name="ActionScriptGeneration">
+      <item name="ServiceType">HTTPMultiService</item>
+      <item name="Package">services.portcontry</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">HTTPService</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="LINKED_FILE"></item>
+    </annotation>
+    <function name="pcountry" return-type="NoName11[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="ActionScriptGeneration">
+        <item name="SerializationFilter">com.adobe.serializers.json.JSONSerializationFilter</item>
+        <item name="method">GET</item>
+        <item name="url">http://localhost:8080/flexspring/jersey/portcountry</item>
+      </annotation>
+      <annotation name="url group">
+        <item name="completeURL">http://localhost:8080/flexspring/jersey/portcountry</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">countryIso2Code,portcode</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+  </service>
+  <entity name="NoName11">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">NoName11</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">Portcontry</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="pcountry">
+      <item name="propertySpecifier">countryIso2Code,portcode</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="countryIso2Code" type="string" required="true"/>
+    <property name="portcode" type="string" required="true"/>
+  </entity>
+</model>

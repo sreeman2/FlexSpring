@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package flex.jersey.resource;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import flex.CommodityDictionary;
+
+
+/**
+ * @author skasi
+ *
+ */
+public interface ICommodityServices {
+
+	public String showCommodities(); 
+	//public void setCommodityInfo(CommodityDaoImpl commodityDaoImpl);
+	
+}

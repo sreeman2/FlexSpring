@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:portcontry="services.portcontry.*">
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			protected function dataGrid_creationCompleteHandler(event:FlexEvent):void
+			{
+				pcountryResult.token = portcontry.pcountry();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:CallResponder id="portcountryResult"/>
+		<s:CallResponder id="pcountryResult"/>
+		<portcontry:Portcontry id="portcontry" fault="Alert.show(event.fault.faultString + '\n' + event.fault.faultDetail)" showBusyCursor="true"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Panel x="53" y="32" width="892" height="558" title="Port &amp; ISO Code" textAlign="center">
+		<mx:DataGrid x="38" y="29" id="dataGrid" creationComplete="dataGrid_creationCompleteHandler(event)" dataProvider="{pcountryResult.lastResult}" height="486" width="209">
+			<mx:columns>
+				<mx:DataGridColumn headerText="PortCode" dataField="portcode"/>
+				<mx:DataGridColumn headerText="countryIso2Code" dataField="countryIso2Code"/>
+			</mx:columns>
+		</mx:DataGrid>
+	</s:Panel>
+</s:Application>

@@ -1,0 +1,36 @@
+:normalEnd:
+project: \ti3-web
+fromUrl: http://10.31.60.177:9090/svn/ti3/tags/3.03d/dev/ti3-web
+toUrl: http://10.31.60.177:9090/svn/ti3/tags/3.03d/dev/ti3-web
+reintegrate: false
+force: false
+recurse: false
+ignore: false
+depth: -2
+Summary result: type: 0 category: Added number: 5
+Summary result: type: 0 category: Updated number: 14
+
+workspaceUrl: http://10.31.60.177:9090/svn/ti3/branches/3.03c/main/dev/ti3-web
+workspaceRevision: 756
+lowerRevision: 755
+upperRevision: 766
+merge http://10.31.60.177:9090/svn/ti3/tags/3.03d/dev/ti3-web C:/TI3WorkSpace/3.03c/main/dev/ti3-web
+Message: 2 A           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/Deploy_05_11
+Message: 1 A           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/Deploy_05_11/text-index.war
+Message: 1 A           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/Deploy_05_11/ti3-web.war
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/test/java/com/globant/cbm/ti3/search/application/PerformSearchCommandTest.java
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/test/java/com/globant/cbm/ti3/search/application/SaveSearchCommandTest.java
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/java/com/globant/cbm/ti3/search/application/SearchCommand.java
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/java/com/globant/cbm/ti3/search/view/SearchController.java
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/java/com/globant/cbm/ti3/security/RestrictAvailableSearchFields.java
+Message: 1 A           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/java/com/globant/cbm/ti3/security/RestrictAvancedSearch.java
+Message: 1 A           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/java/com/globant/cbm/ti3/security/ValidatePrimaryUser.java
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/resources/com/globant/cbm/ti3/integration/view/searchCriteria.ftl
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/resources/com/globant/cbm/ti3/search/messages_es_ES.properties
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/resources/com/globant/cbm/ti3/search/messages.properties
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/resources/com/globant/cbm/ti3/search/view/searchNewSearchDate.ftl
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/resources/com/globant/cbm/ti3/search/view/stringfield.ftl
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/resources/com/globant/cbm/ti3/search/view/searchNew.ftl
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/resources/com/globant/cbm/ti3/search/view/searchSaved.ftl
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/resources/com/globant/cbm/ti3/search/view/resultsDownload.ftl
+Message: 1 U           C:/TI3WorkSpace/3.03c/main/dev/ti3-web/src/main/webapp/WEB-INF/applicationContextSecurity.xml

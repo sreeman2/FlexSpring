@@ -1,0 +1,674 @@
+package com.globant.cbm.ti3.search;
+
+import java.io.Serializable;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.Validate;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+
+import com.globant.cbm.ti3.search.operators.Operator;
+
+/**
+ * Public Search service Field class. This class represents a row field.
+ * @since Apr 15, 2008
+ * @author: mfangio
+ */
+public abstract class Field implements Serializable {
+
+  /**
+   * Serial version UID.
+   */
+  private static final long serialVersionUID = 9011990024814485166L;
+
+  /**
+   * Initial odd for hash code builder.
+   */
+  private static final int INITIAL_ODD = 31;
+
+  /**
+   * Multiplier odd for hash code builder.
+   */
+  private static final int MULTIP_ODD = 37;
+
+  /**
+   * The pattern for the adj operator.
+   */
+  static final Pattern ADJ_PATTERN = Pattern
+      .compile("(\\w*)\\s*[aA][dD][jJ](\\d*)\\s*(\\w*)");
+
+  /**
+   * The pattern for the adj operator.
+   */
+  static final Pattern ADJ_PATTERN_MUST = Pattern
+      .compile("(\\w+)\\s*[aA][dD][jJ](\\d*)\\s*(\\w+)");
+
+  /**
+   * The pattern for the near n operator.
+   */
+  static final Pattern NEAR_PATTERN = Pattern
+      .compile("(\\w*)\\s*[nN][eE][aA][rR](\\d*)\\s*(\\w*)");
+
+  /**
+   * The pattern for the near n operator.
+   */
+  static final Pattern NEAR_PATTERN_MUST = Pattern
+      .compile("(\\w+)\\s*[nN][eE][aA][rR](\\d*)\\s*(\\w+)");
+
+  /**
+   * Common pattern for not valid strings.
+   */
+  private static final Pattern NOT_VALID_STRING = Pattern
+      .compile(".*(\\[|\\]).*");
+
+  private static final Pattern SINGLE_WILDCARD = Pattern
+  .compile(".*(\\s|\\()\\*+(\\s|\\)).*");
+
+  private static final Pattern SINGLE_WILDCARD_END = Pattern
+  .compile(".*(\\s|\\()\\*+");
+
+  private static final Pattern SINGLE_WILDCARD_START = Pattern
+  .compile("\\*+(\\s|\\)).*");
+
+  /**
+   * Pattern to identify wildcards before phrase queries.
+   */
+  private static final Pattern WILDCARD_BEFORE_QUOTES = Pattern
+      .compile(".*(\\*|\\?)\"(\\s)*\\w\\s.*\".*");
+
+  /**
+   * Pattern to identify wildcards after phrase queries.
+   */
+  private static final Pattern WILDCARD_AFTER_QUOTES = Pattern
+      .compile(".*\".*\\s\\w\"(\\*|\\?).*");
+
+  /**
+   * Pattern to identify wildcards after phrase queries.
+   */
+  private static final Pattern WILDCARD_WITHIN_QUOTES1 = Pattern
+      .compile(".*\".*\\s\\w(\\*|\\?)(\\s)*\".*");
+  
+  /**
+   * Pattern to identify wildcards after phrase queries.
+   */
+  private static final Pattern WILDCARD_WITHIN_QUOTES2 = Pattern
+      .compile(".*\".*\\s(\\*|\\?)\\w(\\s)*\".*");
+  
+  /**
+   * Pattern to identify wildcards after phrase queries.
+   */
+  private static final Pattern WILDCARD_WITHIN_QUOTES3 = Pattern
+      .compile(".*\"(\\s)*\\w(\\*|\\?)\\s.*\".*");
+  
+  /**
+   * Pattern to identify wildcards after phrase queries.
+   */
+  private static final Pattern WILDCARD_WITHIN_QUOTES4 = Pattern
+      .compile(".*\"(\\s)*(\\*|\\?)\\w\\s.*\".*");
+  
+  private static final Pattern WILDCARD_ONE_CHAR1 = Pattern
+  .compile(".*\\s(\\*|\\?)\\w\\s.*");
+  private static final Pattern WILDCARD_ONE_CHAR2 = Pattern
+  .compile(".*\\s\\w(\\*|\\?)\\s.*");  
+  private static final Pattern WILDCARD_ONE_CHAR3 = Pattern
+  .compile(".*\\s(\\*|\\?)\\w(\\*|\\?)\\s.*");
+  
+  private static final Pattern MULTIPLE_WILDCARD = Pattern
+  .compile(".*(\\*){2,}.*");
+  private static final Pattern MULTIPLE_WILDCARD2 = Pattern
+  .compile(".*\\s(\\?){2,}\\s.*");
+  
+  /**
+   * The id of the field.
+   */
+  private Long id;
+
+  /**
+   * The name of the field.
+   */
+  private String name;
+
+  /**
+   * The source of the field.
+   */
+  private TypeOfCargo source;
+
+  /**
+   * The category that the field belongs it.
+   */
+  private Long categoryId;
+
+  /**
+   * The kind of the field.
+   */
+  private DataDetail kind;
+
+  /**
+   * The field's dimension.
+   */
+  private Dimension dimension;
+
+  /**
+   * Contains whether a field must have a lookup table.
+   */
+  private boolean isLookup;
+  
+  private boolean isDisabled;
+
+  /**
+   * Full constructor.
+   * @param theId
+   *          the id. It cannot be null.
+   * @param theName
+   *          the name. It cannot be null.
+   * @param theSource
+   *          the source. It cannot be null.
+   * @param theFieldKind
+   *          the kind. It cannot be null.
+   * @param theCategoryId
+   *          theCategoryId. It cannot be null.
+   */
+  public Field(final Long theId, final String theName,
+      final TypeOfCargo theSource, final DataDetail theFieldKind,
+      final Long theCategoryId) {
+    Validate.notNull(theId, "The id cannot be null");
+    Validate.notNull(theName, "The name cannot be null");
+    Validate.notNull(theSource, "The source cannot be null");
+    Validate.notNull(theFieldKind, "The field kind cannot be null");
+    Validate.notNull(theCategoryId, "The category id cannot be null");
+    this.id = theId;
+    this.name = theName;
+    this.source = theSource;
+    this.kind = theFieldKind;
+    this.categoryId = theCategoryId;
+    this.isDisabled = false;
+  }
+
+  /**
+   * Semi-full constructor.
+   * @param theId
+   *          the id. It cannot be null.
+   * @param theName
+   *          the name. It cannot be null.
+   * @param theSource
+   *          the source. It cannot be null.
+   * @param theCategoryId
+   *          theCategoryId. It cannot be null.
+   */
+  public Field(final Long theId, final String theName,
+      final TypeOfCargo theSource, final Long theCategoryId) {
+    this(theId, theName, theSource, DataDetail.BOL, theCategoryId);
+  }
+
+  /**
+   * Get id attribute.
+   * @return Long id.
+   */
+  public Long getId() {
+    return id;
+  }
+
+  /**
+   * Get Kind attribute.
+   * @return String kind.
+   */
+  public DataDetail getKind() {
+    return kind;
+  }
+
+  /**
+   * Get name attribute.
+   * @return String name.
+   */
+  public String getName() {
+    return name;
+  }
+
+  /**
+   * Get source attribute.
+   * @return String source.
+   */
+  public TypeOfCargo getSource() {
+    return source;
+  }
+
+  /**
+   * Get category attribute.
+   * @return Category category.
+   */
+  public Long getCategoryId() {
+    return categoryId;
+  }
+
+  public boolean isDisabled() {
+	return isDisabled;
+  }
+   public void setDisabled(boolean isDisabled) {
+		this.isDisabled = isDisabled;
+  }
+  /**
+   * Equals operator.
+   * @param obj
+   *          the object to compare to.
+   * @return boolean.
+   */
+  @Override
+  public boolean equals(final Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (!(obj instanceof Field)) {
+      return false;
+    }
+
+    final Field other = (Field) obj;
+
+    return id.equals(other.id) && kind.equals(other.kind)
+        && name.equals(other.name) && source.equals(other.source)
+        && categoryId.equals(other.categoryId);
+  }
+
+  /**
+   * Hashcode generator.
+   * @see java.lang.Object#hashCode()
+   * @return int hashcode.
+   */
+  @Override
+  public int hashCode() {
+    HashCodeBuilder hcBuilder = new HashCodeBuilder(INITIAL_ODD, MULTIP_ODD);
+    hcBuilder.append(id).append(name).append(source).append(kind).append(
+        categoryId);
+    return hcBuilder.toHashCode();
+  }
+
+  /**
+   * Creates a new FieldValue and returns it.
+   * @param firstValue
+   *          the first value to create it. Can not be null.
+   * @param secondValue
+   *          the second value to create it. Allows null.
+   * @return FiesdValue the FieldValue. Never null.
+   */
+  public FieldValue buildValue(final String firstValue,
+      final String secondValue) {
+    return buildValue(firstValue, secondValue, getDefaultOperator());
+  }
+
+  /**
+   * Creates a new FieldValue and returns it.
+   * @param firstValue
+   *          the first value to create it. Can not be null.
+   * @param secondValue
+   *          the second value to create it. Allows null.
+   * @param operator
+   *          an operator to set. Can not be null.
+   * @return FiesdValue the FieldValue. Never null.
+   */
+  public FieldValue buildValue(final String firstValue,
+      final String secondValue, final Operator operator) {
+    Validate.notNull(firstValue, "The value cannot be null");
+    Validate.notNull(operator, "Operator can not be null");
+    if (secondValue != null) {
+      return new FieldValue(this, this.parseValue(firstValue), this
+          .parseValue(secondValue),  operator);
+    } else {
+      return new FieldValue(this, this.parseValue(firstValue),  operator);
+    }
+  }
+
+  /**
+   * Creates a new FieldValue and returns it.
+   * @param value
+   *          the value to create it. Can not be null.
+   * @return a FieldValue. Never null.
+   */
+  public FieldValue buildValue(final Object value) {
+    return buildValue(value, getDefaultOperator());
+  }
+
+  /**
+   * Creates a new FieldValue and returns it.
+   * @param value
+   *          the value to create it. Can not be null.
+   * @param operator
+   *          an operator to set. Can not be null.
+   * @return a FieldValue. Never null.
+   */
+  public FieldValue buildValue(final Object value, final Operator operator) {
+    if (value instanceof String) {
+      return buildValue((String) value, null, operator);
+    } else {
+      return buildValue(((String[]) value)[0], ((String[]) value)[1],
+          operator);
+    }
+  }
+
+  /**
+   * Compares the given category id with the private category id.
+   * @param category
+   *          the category.
+   * @return boolean true if equals.
+   */
+  public boolean belongsTo(final Category category) {
+    Validate.notNull(category);
+    return categoryId.equals(category.getId());
+  }
+
+  /**
+   * Decides if a field has to be included in a search by examining its source,
+   * kind and value. A field will be used in a search only if the source and
+   * kind matches with the specified in the search and if the value is not
+   * null.
+   * @param aSource
+   *          a source specified for a search.
+   * @return true if the field has to be included in the search, false
+   *         otherwise.
+   */
+  public boolean isSearchable(final TypeOfCargo aSource) {
+    return source == aSource;
+  }
+
+  /**
+   * Get the field type.
+   * @return String
+   */
+  public abstract String getFieldType();
+
+  /**
+   * Validates a value for this field.
+   * @param value
+   *          a value to validate.
+   * @return a message error code that describes the error, null if value is
+   *         valid.
+   */
+  public abstract String validate(String value);
+
+  /**
+   * Validates a value, by default value will be validated as a String, if a
+   * subclass receives other type of value, it should be re-defined with its
+   * needed behavior.
+   * @param value
+   *          a value to be validated.
+   * @return a message error code that describes the error, null if value is
+   *         valid.
+   */
+  public String validate(final Object value) {
+    return validate((String) value);
+  }
+
+  /**
+   * Retrieves a valid value for this field given a String.
+   * @param value
+   *          a value in String mode.
+   * @return a value in its correct Type.
+   */
+  public abstract Object parseValue(String value);
+
+  /**
+   * Parses the given value into a String.
+   * @param value
+   *          The value to parse, cannot be null.
+   * @return A string representing the value, never null.
+   */
+  public String toStringValue(final Object value) {
+    Validate.notNull(value, "The value cannot be null");
+    return value.toString();
+  }
+
+  /**
+   * Returns default operator.
+   * @return default operator.
+   */
+  public Operator getDefaultOperator() {
+    return Operator.LIKE;
+  }
+  /**
+   * Returns true if the fields uses a numeric operator.
+   * @return true if the fields uses a numeric operator.
+   */
+  public boolean isUseOperator() {
+    return false;
+  }
+  /**
+   * Returns an array of the applicable operators for this field.
+   * @return An array with the applicable operators, never null.
+   */
+  public Operator[] getApplicableOperators() {
+    return new Operator[] {getDefaultOperator()};
+  }
+
+  /**
+   * Maps a map of strings with the applicable operators of the field.
+   * @return A map with the key as the name of the operator and the value as
+   *         the operator symbol.
+   */
+  public Map<String, String> getApplicableOperatorsAsMap() {
+    Map<String, String> result = new TreeMap<String, String>();
+    for (Operator op : getApplicableOperators()) {
+      result.put(op.name(), op.getSqlSymbol());
+    }
+    return result;
+  }
+
+  /**
+   * Returns a string representation of the field.
+   * @return A human readable string, never null.
+   */
+  public String toString() {
+    StringBuilder builder = new StringBuilder("Field '");
+    builder.append(name).append("' of type '").append(getFieldType()).append(
+        "'");
+    return builder.toString();
+  }
+
+  /**
+   * Returns the dimension.
+   * @return the dimension.
+   */
+  public Dimension getDimension() {
+    return dimension;
+  }
+
+  /**
+   * Sets the dimension.
+   * @param theDimension The dimension to set. Can not be null.
+   */
+  public void setDimension(final Dimension theDimension) {
+    Validate.notNull(theDimension);
+    this.dimension = theDimension;
+  }
+
+  /**
+   * Returns the isLookup.
+   * @return the isLookup.
+   */
+  public boolean isLookup() {
+    return isLookup;
+  }
+
+  /**
+   * Sets the isLookup.
+   * @param value The isLookup to set.
+   */
+  public void setLookup(final boolean value) {
+    this.isLookup = value;
+  }
+
+  /**
+   * Returns a short code for this field. The short code is obtained by
+   * returning the part of the name after the last dot.
+   * @return A short code for the field, never null.
+   */
+  public String getShortCode() {
+    int idx = getName().lastIndexOf('.');
+    String firstPart = getName().substring(0, idx);
+    StringBuilder code = new StringBuilder(firstPart.substring(firstPart
+        .lastIndexOf('.') + 1));
+    code.append(StringUtils.capitalize(getName().substring(idx + 1)));
+    return code.toString();
+  }
+
+  /**
+   * Validates ADJ and NEAR queries sintaxis.
+   * @param value the value to validate.
+   * @return an error if it exists, false otherwise.
+   */
+  protected String validateAdjAndNear(final String value) {
+    Matcher m = ADJ_PATTERN.matcher((String) value);
+    if (m.matches()) {
+      m = ADJ_PATTERN_MUST.matcher((String) value);
+      if (!m.matches()) {
+        return "search.error.expression.not.valid.adj";
+      }
+    }
+    m = NEAR_PATTERN.matcher((String) value);
+    if (m.matches()) {
+      m = NEAR_PATTERN_MUST.matcher((String) value);
+      if (!m.matches()) {
+        return "search.error.expression.not.valid.near";
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Validates the occurrences of quotes in a string.
+   * @param value the value to validate.
+   * @return true if count of quotes is even
+   */
+  protected boolean isStringWithQuotes(final String value) {
+    int i = 0;
+    int j = 0;
+    String aux;
+    boolean ret = false;
+    int occurrence = 0;
+    while (i < value.length()) {
+      j = i + 1;
+      aux =  (String) value.subSequence(i, j);
+      if ((aux.compareTo("\"")) == 0) {
+        occurrence++;
+      }
+      i = i + 1;
+    }
+    if (occurrence % 2 != 0) {
+      ret = true;
+    }
+    return ret;
+  }
+  
+	protected boolean isWildcardValid(final String value) {
+	  String theValue = " " + value + " ";
+    if (value.indexOf("*") >= 0 || value.indexOf("?") >= 0) {
+      Matcher before = WILDCARD_BEFORE_QUOTES.matcher(theValue);
+      Matcher within1 = WILDCARD_WITHIN_QUOTES1.matcher(theValue);
+      Matcher within2 = WILDCARD_WITHIN_QUOTES2.matcher(theValue);
+      Matcher within3 = WILDCARD_WITHIN_QUOTES3.matcher(theValue);
+      Matcher within4 = WILDCARD_WITHIN_QUOTES4.matcher(theValue);
+      Matcher after = WILDCARD_AFTER_QUOTES.matcher(theValue);
+      //Removing wildcard restriction for simple expressions (a*,*a)
+//      Matcher simple1 = WILDCARD_ONE_CHAR1.matcher(theValue);
+//      Matcher simple2 = WILDCARD_ONE_CHAR2.matcher(theValue);
+//      Matcher simple5 = WILDCARD_ONE_CHAR3.matcher(theValue);
+      if (before.matches() || within1.matches() || within2.matches()
+          || within3.matches() || within4.matches() || after.matches()
+//          || simple1.matches() || simple2.matches() || simple5.matches()
+           ) {
+        return false;
+      }
+    }
+	  return true;
+	}
+	
+	protected boolean isMultipleWildcard(final String value) {
+    String theValue = " " + value + " ";
+    if (value.indexOf("*") >= 0 || value.indexOf("?") >= 0) {
+      Matcher m1 = MULTIPLE_WILDCARD.matcher(theValue);
+      Matcher m2 = MULTIPLE_WILDCARD2.matcher(theValue);
+      if (m1.matches() || m2.matches()) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Validates the occurrences of quotes in a string.
+   * @param value the value to validate.
+   * @return true if count of quotes is even
+   */
+  protected boolean isStringWithinOddPharentesis(final String value) {
+    int occurrence = 0;
+    char[] aux = value.toCharArray();
+    for (int i = 0; i < value.length(); i++) {
+      if (aux[i] == '(') {
+        occurrence++;
+      }
+      if (aux[i] == ')') {
+        occurrence--;
+      }
+    }
+    if (occurrence == 0) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Validates the occurrences of "\n" in a string.
+   * @param value the value to validate.
+   * @return true if exists "\n"
+   */
+
+  protected boolean isExistsNewLine(final String value) {
+    return value.contains("\n");
+  }
+
+  /**
+   * Validates errors that are common for all string fields.
+   * @param value the value to validate.
+   * @return an error when found, null otherwise.
+   */
+  protected String validateCommonStrings(final String value) {
+    if (value.trim().length() == 0) {
+      return "search.error.empty";
+    }
+    Matcher m = NOT_VALID_STRING.matcher(value);
+    if (m.matches()) {
+      return "search.error.not.valid.characters";
+    }
+    if (existSingleWildcard(value)) {
+        return "search.error.single.wildcard";
+    }
+    if (!isStringWithinOddPharentesis(value)) {
+      return "search.error.odd.phar";
+    }
+    if (isStringWithQuotes(value)) {
+      return "search.error.quotes.marks";
+    }
+    if (!isWildcardValid(value)) {
+      return "search.error.not.valid.wildcard";
+    }
+    if (isMultipleWildcard(value)) {
+      return "search.error.multiple.wildcard";
+    }
+/*    if (isExistsNewLine(value)) {
+      return "search.error.end.of.line";
+    }*/
+    return null;
+  }
+  
+  /**
+   * Returns true if exists a single wildcard expression.
+   * @return
+   */
+  private boolean existSingleWildcard(final String value) {
+    String theValue = value.trim();
+    Matcher single = SINGLE_WILDCARD.matcher(theValue);
+    Matcher end = SINGLE_WILDCARD_END.matcher(theValue);
+    Matcher start = SINGLE_WILDCARD_START.matcher(theValue);
+    return "*".equals(theValue) || single.matches() || end.matches() || start.matches();
+  }
+}

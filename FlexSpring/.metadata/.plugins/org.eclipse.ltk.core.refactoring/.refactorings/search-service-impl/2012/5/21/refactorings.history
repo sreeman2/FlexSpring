@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;search-service-impl-3.0-FINAL-SNAPSHOT.jar&apos; to &apos;report-service-impl&apos;&#x0D;&#x0A;- Original project: &apos;search-service-impl&apos;&#x0D;&#x0A;- Destination element: &apos;report-service-impl&apos;&#x0D;&#x0A;- Original element: &apos;search-service-impl-3.0-FINAL-SNAPSHOT.jar&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="=report-service-impl" element1="search-service-impl-3.0-FINAL-SNAPSHOT.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1337808124170" units="0" version="1.0"/>
+</session>

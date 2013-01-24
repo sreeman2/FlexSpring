@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.ui.views,3.5.1.M20110202-0800,"org.eclipse.ui.views",1356632450370
+started,bundle,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"org.eclipse.ui.workbench",1356632450370
+started,bundle,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.workbench.texteditor",1356632450370
+started,bundle,org.eclipse.update.configurator,3.3.100.v20100512,"org.eclipse.update.configurator",1356632450370
+started,bundle,org.eclipse.update.core,3.2.402.R36x_v20100629,"org.eclipse.update.core",1356632450370
+started,bundle,org.eclipse.update.scheduler,3.2.300.v20100512,"org.eclipse.update.scheduler",1356632450370
+started,bundle,org.eclipse.wst.common.core,1.2.0.v200908252030,"org.eclipse.wst.common.core",1356632450370
+started,bundle,org.eclipse.wst.common.emf,1.2.3.v201012100400,"org.eclipse.wst.common.emf",1356632450370
+started,bundle,org.eclipse.wst.common.emfworkbench.integration,1.2.4.v201106210700,"org.eclipse.wst.common.emfworkbench.integration",1356632450370
+started,bundle,org.eclipse.wst.common.frameworks,1.2.1.v201107271600,"org.eclipse.wst.common.frameworks",1356632450370
+started,bundle,org.eclipse.wst.common.frameworks.ui,1.2.0.v201004080500,"org.eclipse.wst.common.frameworks.ui",1356632450370
+started,bundle,org.eclipse.wst.common.modulecore,1.2.7.v201110060300,"org.eclipse.wst.common.modulecore",1356632450370
+started,bundle,org.eclipse.wst.common.project.facet.core,1.4.102.v201008170019,"org.eclipse.wst.common.project.facet.core",1356632450370
+started,bundle,org.eclipse.wst.common.ui,1.1.500.v200911190730,"org.eclipse.wst.common.ui",1356632450370
+started,bundle,org.eclipse.wst.jsdt.core,1.1.8.v201109150205,"org.eclipse.wst.jsdt.core",1356632450370
+started,bundle,org.eclipse.wst.jsdt.manipulation,1.0.200.v201004150600,"org.eclipse.wst.jsdt.manipulation",1356632450370
+started,bundle,org.eclipse.wst.jsdt.ui,1.1.7.v201109150205,"org.eclipse.wst.jsdt.ui",1356632450370
+started,bundle,org.eclipse.wst.server.core,1.1.208.v20111005_1734,"org.eclipse.wst.server.core",1356632450370
+started,bundle,org.eclipse.wst.server.ui,1.1.209.v20111005_1716,"org.eclipse.wst.server.ui",1356632450370
+started,bundle,org.eclipse.wst.validation,1.2.204.v201109220700,"org.eclipse.wst.validation",1356632450370
+started,bundle,org.eclipse.wst.web,1.1.403.v201103081400,"org.eclipse.wst.web",1356632450370
+started,bundle,org.eclipse.wst.wsdl,1.2.105.v201108291616,"org.eclipse.wst.wsdl",1356632450370
+started,bundle,org.eclipse.wst.xml.core,1.1.505.v201109271810,"org.eclipse.wst.xml.core",1356632450370
+started,bundle,org.guvnor.tools,5.2.1.Final,"org.guvnor.tools",1356632450370
+started,bundle,org.jboss.ide.eclipse.as.core,2.2.0.v20111110-1751-H262-Final,"org.jboss.ide.eclipse.as.core",1356632450370
+started,bundle,org.jboss.ide.eclipse.as.ui,2.2.0.v20111110-1751-H262-Final,"org.jboss.ide.eclipse.as.ui",1356632450370
+started,bundle,org.jboss.tools.common,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common",1356632450370
+started,bundle,org.jboss.tools.common.el.core,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common.el.core",1356632450370
+started,bundle,org.jboss.tools.common.model,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common.model",1356632450370
+started,bundle,org.jboss.tools.common.projecttemplates,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common.projecttemplates",1356632450370
+started,bundle,org.jboss.tools.common.verification.ui,3.1.0.v20111025-0439-H174-Final,"org.jboss.tools.common.verification.ui",1356632450370
+started,bundle,org.jboss.tools.esb.project.core,1.4.1.v20111111-0222-H200-Final,"org.jboss.tools.esb.project.core",1356632450370
+started,bundle,org.jboss.tools.esb.project.ui,1.4.1.v20111111-0222-H200-Final,"org.jboss.tools.esb.project.ui",1356632450370
+started,bundle,org.jboss.tools.jmx.core,1.2.0.v20111025-2055-H161-Final,"org.jboss.tools.jmx.core",1356632450370
+started,bundle,org.jboss.tools.jsf.ui,3.2.1.v20111027-1258-H202-Final,"org.jboss.tools.jsf.ui",1356632450370
+started,bundle,org.jboss.tools.jst.web,3.2.1.v20111025-0510-H215-Final,"org.jboss.tools.jst.web",1356632450370
+started,bundle,org.jboss.tools.jst.web.ui,3.2.1.v20111025-0510-H215-Final,"org.jboss.tools.jst.web.ui",1356632450370
+started,bundle,org.jboss.tools.runtime,1.2.0.v20111025-0316-H469-Final,"org.jboss.tools.runtime",1356632450370
+started,bundle,org.jboss.tools.runtime.ui,1.0.0.v20111025-0316-H469-Final,"org.jboss.tools.runtime.ui",1356632450370
+started,bundle,org.jboss.tools.seam.core,3.2.1.v20111027-1359-H303-Final,"org.jboss.tools.seam.core",1356632450370
+started,bundle,org.jboss.tools.seam.ui,3.2.1.v20111027-1359-H303-Final,"org.jboss.tools.seam.ui",1356632450370
+started,bundle,org.jboss.tools.struts.ui,3.1.1.v20111025-2151-H198-Final,"org.jboss.tools.struts.ui",1356632450370
+started,bundle,org.jboss.tools.usage,1.0.1.v20111025-0334-H157-Final,"org.jboss.tools.usage",1356632450370
+started,bundle,org.tigris.subversion.clientadapter,1.6.12,"org.tigris.subversion.clientadapter",1356632450370
+started,bundle,org.tigris.subversion.subclipse.core,1.6.18,"org.tigris.subversion.subclipse.core",1356632450370
+started,bundle,org.tigris.subversion.subclipse.mylyn,3.0.0,"org.tigris.subversion.subclipse.mylyn",1356632450370
+started,bundle,org.tigris.subversion.subclipse.tools.usage,1.0.1,"org.tigris.subversion.subclipse.tools.usage",1356632450370
+started,bundle,com.qnx.flashbuilder.multiplatform.qnx.ui,1.2.0.201110311231,"com.qnx.flashbuilder.multiplatform.qnx.ui",1356632450371
+started,bundle,com.qnx.flexide.multiplatform.qnx,1.2.0.201110311231,"com.qnx.flexide.multiplatform.qnx",1356632450371
+started,bundle,com.qnx.tools.bbt.core,1.1.0.201110311231,"com.qnx.tools.bbt.core",1356632450372
+started,bundle,com.qnx.tools.bbt.ui,1.1.0.201110311231,"com.qnx.tools.bbt.ui",1356632450372
+started,bundle,org.eclipse.core.databinding.observable,1.4.0.I20110222-0800,"org.eclipse.core.databinding.observable",1356632450372
+started,bundle,org.eclipse.epp.mpc.ui,1.1.0.I20110525-0742,"org.eclipse.epp.mpc.ui",1356632450372
+started,bundle,org.eclipse.epp.usagedata.gathering,1.3.1.R201106061540,"org.eclipse.epp.usagedata.gathering",1356632450372
+started,bundle,org.eclipse.epp.usagedata.recording,1.3.1.R201106061540,"org.eclipse.epp.usagedata.recording",1356632450372
+started,bundle,org.eclipse.jface,3.7.0.I20110522-1430,"org.eclipse.jface",1356632450372
+started,bundle,org.eclipse.m2e.logback.configuration,1.0.0.20110607-2117,"org.eclipse.m2e.logback.configuration",1356632450372
+started,bundle,org.eclipse.ui.forms,3.5.100.v20110425,"org.eclipse.ui.forms",1356632450372
+started,bundle,org.eclipse.wb.discovery.core,1.0.0.r37x201106081733,"org.eclipse.wb.discovery.core",1356632450372
+started,bundle,org.eclipse.wb.discovery.ui,1.0.0.r37x201106081733,"org.eclipse.wb.discovery.ui",1356632450372
+started,bundle,com.adobe.flash.compiler,4.7.0.349722,"com.adobe.flash.compiler",1356632450372
+started,bundle,com.adobe.flashbuilder.launching.win8,4.7.0.349722,"com.adobe.flashbuilder.launching.win8",1356632450372
+started,bundle,com.adobe.flashbuilder.multiplatform.android.ui,4.7.0.349722,"com.adobe.flashbuilder.multiplatform.android.ui",1356632450373
+started,bundle,com.adobe.flashbuilder.multiplatform.ios.ui,4.7.0.349722,"com.adobe.flashbuilder.multiplatform.ios.ui",1356632450373
+started,bundle,com.adobe.flexbuilder.dcrad,4.7.0.349722,"com.adobe.flexbuilder.dcrad",1356632450373
+started,bundle,com.adobe.flexbuilder.debug.ui,4.7.0.349722,"com.adobe.flexbuilder.debug.ui",1356632450373
+started,bundle,com.adobe.flexbuilder.exportimport,4.7.0.349722,"com.adobe.flexbuilder.exportimport",1356632450373
+started,bundle,com.adobe.flexbuilder.flashbridge,4.7.0.349722,"com.adobe.flexbuilder.flashbridge",1356632450373
+started,bundle,com.adobe.flexbuilder.flex,4.7.0.349722,"com.adobe.flexbuilder.flex",1356632450374
+started,bundle,com.adobe.flexbuilder.multisdk,4.7.0.349722,"com.adobe.flexbuilder.multisdk",1356632450374
+started,bundle,com.adobe.flexbuilder.mxmlmodel,4.7.0.349722,"com.adobe.flexbuilder.mxmlmodel",1356632450374
+started,bundle,com.adobe.flexbuilder.project,4.7.0.349722,"com.adobe.flexbuilder.project",1356632450374
+started,bundle,com.adobe.flexbuilder.project.ui,4.7.0.349722,"com.adobe.flexbuilder.project.ui",1356632450374
+started,bundle,com.adobe.flexbuilder.utils.osnative,4.7.0.349722,"com.adobe.flexbuilder.utils.osnative",1356632450375
+started,bundle,com.adobe.flexide.amt,4.7.0.349722,"com.adobe.flexide.amt",1356632450376
+started,bundle,com.adobe.flexide.editorcore,4.7.0.349722,"com.adobe.flexide.editorcore",1356632450376
+started,bundle,com.adobe.flexide.launching,4.7.0.349722,"com.adobe.flexide.launching",1356632450376
+started,bundle,com.adobe.flexide.nativelibs,4.7.0.349722,"com.adobe.flexide.nativelibs",1356632450377
+started,bundle,com.adobe.flexide.project.multiplatform,4.7.0.349722,"com.adobe.flexide.project.multiplatform",1356632450377
+os,sysinfo,,,"win32",1356632450381
+arch,sysinfo,,,"x86",1356632450381
+ws,sysinfo,,,"win32",1356632450381
+locale,sysinfo,,,"en_US",1356632450381
+processors,sysinfo,,,"4",1356632450381
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1356632450381
+java.runtime.version,sysinfo,,,"1.7.0_07-b11",1356632450381
+java.specification.name,sysinfo,,,"Java Platform API Specification",1356632450381
+java.specification.vendor,sysinfo,,,"Oracle Corporation",1356632450381
+java.specification.version,sysinfo,,,"1.7",1356632450381
+java.vendor,sysinfo,,,"Oracle Corporation",1356632450381
+java.version,sysinfo,,,"1.7.0_07",1356632450381
+java.vm.info,sysinfo,,,"mixed mode",1356632450381
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1356632450381
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1356632450381
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1356632450381
+java.vm.specification.version,sysinfo,,,"1.7",1356632450381
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1356632450381
+java.vm.version,sysinfo,,,"23.3-b01",1356632450381
+started,bundle,org.eclipse.m2e.usagedata,1.0.0.20110607-2117,"org.eclipse.m2e.usagedata",1356632450384
+started,bundle,com.adobe.flexbuilder.editors.derived,4.7.0.349722,"com.adobe.flexbuilder.editors.derived",1356632452305
+error,log,,,"Error fetching actionscript project for myFriends",1356632454145
+started,bundle,com.collabnet.subversion.merge,2.2.4,"com.collabnet.subversion.merge",1356632456092
+started,bundle,org.eclipse.compare.core,3.5.200.I20110208-0800,"org.eclipse.compare.core",1356632456302
+started,bundle,org.eclipse.compare,3.5.101.R36x_v20100929-0800,"org.eclipse.compare",1356632456318
+error,log,,,"Error fetching actionscript project for myFriends",1356632456470
+started,bundle,org.tigris.subversion.subclipse.ui,1.6.18,"org.tigris.subversion.subclipse.ui",1356632461306
+started,bundle,org.hibernate.eclipse.jdt.ui,3.4.1.v20111025-0625-H210-Final,"org.hibernate.eclipse.jdt.ui",1356632464566
+started,bundle,org.hibernate.eclipse,3.4.1.v20111025-0625-H210-Final,"org.hibernate.eclipse",1356632472507
+started,bundle,org.eclipse.jpt.core,2.3.3.v201102172310,"org.eclipse.jpt.core",1356632473742
+started,bundle,org.hibernate.eclipse.console,3.4.1.v20111025-0625-H210-Final,"org.hibernate.eclipse.console",1356632475012
+started,bundle,org.eclipse.jdt.apt.core,3.3.402.R36_v20110120-1000,"org.eclipse.jdt.apt.core",1356632475080
+started,bundle,org.eclipse.jdt.apt.pluggable.core,1.0.301.R36_v20100727-0110,"org.eclipse.jdt.apt.pluggable.core",1356632475086
+started,bundle,org.jboss.tools.portlet.core,1.2.0.v20111025-0629-H191-Final,"org.jboss.tools.portlet.core",1356632484165
+started,bundle,org.eclipse.wst.dtd.core,1.1.402.v201109061850,"org.eclipse.wst.dtd.core",1356632485422
+started,bundle,org.eclipse.wst.sse.ui,1.2.5.v201108191505,"org.eclipse.wst.sse.ui",1356632485455
+started,bundle,org.eclipse.wst.html.ui,1.0.505.v201106160200,"org.eclipse.wst.html.ui",1356632485457
+started,bundle,org.eclipse.jst.jee,1.0.303.v201103311600,"org.eclipse.jst.jee",1356632485479
+started,bundle,org.eclipse.wst.sse.core,1.1.506.v201110201853,"org.eclipse.wst.sse.core",1356632485491
+started,bundle,org.eclipse.jst.jsf.common,1.2.2.v201101211220,"org.eclipse.jst.jsf.common",1356632485573
+started,bundle,org.eclipse.jst.jsf.core,1.3.5.v201110061050,"org.eclipse.jst.jsf.core",1356632485626
+started,bundle,org.jboss.tools.jsf,3.2.1.v20111027-1258-H202-Final,"org.jboss.tools.jsf",1356632485793
+started,bundle,org.eclipse.core.variables,3.2.400.v20100505,"org.eclipse.core.variables",1356632486590
+started,bundle,org.jboss.ide.eclipse.archives.core,3.2.1.v20111025-0345-H201-Final,"org.jboss.ide.eclipse.archives.core",1356632486603
+started,bundle,org.jboss.ide.eclipse.archives.webtools,2.2.0.v20111110-1751-H262-Final,"org.jboss.ide.eclipse.archives.webtools",1356632486610
+started,bundle,org.eclipse.jst.jsp.core,1.2.308.v201109202150,"org.eclipse.jst.jsp.core",1356632486611
+started,bundle,org.jboss.ide.eclipse.as.wtp.core,2.2.0.v20111110-1751-H262-Final,"org.jboss.ide.eclipse.as.wtp.core",1356632486613
+error,log,,,"Error fetching actionscript project for myFriends",1356632486881
+started,bundle,org.jboss.tools.smooks.ui,1.2.0.v20111025-0650-H200-Final,"org.jboss.tools.smooks.ui",1356632486898
+error,log,,,"Error fetching actionscript project for myFriends",1356632487379
+error,log,,,"Error fetching actionscript project for myFriends",1356632487451
+started,bundle,org.jboss.tools.smooks.core,1.2.0.v20111025-0650-H200-Final,"org.jboss.tools.smooks.core",1356632487711
+error,log,,,"Error fetching actionscript project for sayHello",1356632487739
+error,log,,,"Error fetching actionscript project for sayHello",1356632488045
+error,log,,,"Error fetching actionscript project for sayHello",1356632488342
+started,bundle,org.eclipse.wst.wsdl.validation,1.1.501.v201004201506,"org.eclipse.wst.wsdl.validation",1356632488351
+started,bundle,org.eclipse.wst.xsd.core,1.1.503.v201011121919,"org.eclipse.wst.xsd.core",1356632488411
+started,bundle,org.eclipse.wst.xsl.core,1.1.0.v201004290328,"org.eclipse.wst.xsl.core",1356632488418
+started,bundle,org.jboss.tools.flow.jpdl4.multipage,4.3.0.v20111025-0508-H201-Final,"org.jboss.tools.flow.jpdl4.multipage",1356632488421
+error,log,,,"Error fetching actionscript project for sayHello",1356632488631
+started,bundle,org.jboss.tools.jst.web.kb,3.2.1.v20111025-0510-H215-Final,"org.jboss.tools.jst.web.kb",1356632488839
+started,bundle,org.jboss.tools.common.verification,3.2.0.v20111025-0439-H174-Final,"org.jboss.tools.common.verification",1356632488842
+error,log,,,"Error fetching actionscript project for myFriends",1356632488932
+started,bundle,org.eclipse.wst.wsi.ui,1.0.501.v201004201506,"org.eclipse.wst.wsi.ui",1356632488999
+error,log,,,"Error fetching actionscript project for myFriends",1356632489054
+error,log,,,"Error fetching actionscript project for myFriends",1356632489085
+error,log,,,"Error fetching actionscript project for myFriends",1356632489107
+error,log,,,"Error fetching actionscript project for sayHello",1356632489140
+error,log,,,"Error fetching actionscript project for sayHello",1356632489731
+error,log,,,"Error fetching actionscript project for sayHello",1356632490019
+error,log,,,"Error fetching actionscript project for sayHello",1356632490354
+error,log,,,"Error fetching actionscript project for myFriends",1356632490644
+error,log,,,"Error fetching actionscript project for myFriends",1356632490916
+error,log,,,"Error fetching actionscript project for myFriends",1356632490938
+error,log,,,"Error fetching actionscript project for sayHello",1356632490962
+error,log,,,"Error fetching actionscript project for sayHello",1356632491293
+error,log,,,"Error fetching actionscript project for sayHello",1356632491899
+error,log,,,"Error fetching actionscript project for sayHello",1356632492182
+error,log,,,"Error fetching actionscript project for myFriends",1356632492465
+error,log,,,"Error fetching actionscript project for myFriends",1356632492489
+error,log,,,"Error fetching actionscript project for myFriends",1356632492519
+error,log,,,"Error fetching actionscript project for myFriends",1356632492562
+error,log,,,"Error fetching actionscript project for sayHello",1356632492591
+error,log,,,"Error fetching actionscript project for sayHello",1356632492908
+error,log,,,"Error fetching actionscript project for sayHello",1356632493188
+error,log,,,"Error fetching actionscript project for sayHello",1356632493458
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632493732
+error,log,,,"Error fetching actionscript project for myFriends",1356632493757
+error,log,,,"Error fetching actionscript project for myFriends",1356632494076
+error,log,,,"Error fetching actionscript project for myFriends",1356632494103
+error,log,,,"Error fetching actionscript project for myFriends",1356632494132
+error,log,,,"Error fetching actionscript project for sayHello",1356632494160
+error,log,,,"Error fetching actionscript project for sayHello",1356632494436
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632494691
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632494752
+error,log,,,"Error fetching actionscript project for sayHello",1356632495869
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632496187
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632496204
+error,log,,,"Error fetching actionscript project for sayHello",1356632496225
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632496552
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632496880
+error,log,,,"Error fetching actionscript project for myFriends",1356632496901
+error,log,,,"Error fetching actionscript project for myFriends",1356632496921
+error,log,,,"Error fetching actionscript project for myFriends",1356632496941
+error,log,,,"Error fetching actionscript project for myFriends",1356632496962
+error,log,,,"Error fetching actionscript project for sayHello",1356632496983
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632497284
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632498852
+error,log,,,"Error fetching actionscript project for sayHello",1356632498873
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632499199
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632499843
+error,log,,,"Error fetching actionscript project for sayHello",1356632499864
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632500169
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632500815
+error,log,,,"Error fetching actionscript project for sayHello",1356632500835
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632501439
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632501756
+error,log,,,"Error fetching actionscript project for myFriends",1356632501777
+error,log,,,"Error fetching actionscript project for myFriends",1356632501796
+error,log,,,"Error fetching actionscript project for myFriends",1356632501815
+error,log,,,"Error fetching actionscript project for myFriends",1356632501842
+error,log,,,"Error fetching actionscript project for sayHello",1356632501862
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632502199
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632502516
+error,log,,,"Error fetching actionscript project for sayHello",1356632502538
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632502855
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632502872
+error,log,,,"Error fetching actionscript project for sayHello",1356632502892
+error,log,,,"Error fetching actionscript project for sayHello",1356632503198
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632503498
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632503521
+error,log,,,"Error fetching actionscript project for myFriends",1356632503543
+error,log,,,"Error fetching actionscript project for myFriends",1356632503562
+error,log,,,"Error fetching actionscript project for myFriends",1356632503582
+error,log,,,"Error fetching actionscript project for myFriends",1356632503600
+error,log,,,"Error fetching actionscript project for sayHello",1356632503620
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632503941
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632504595
+error,log,,,"Error fetching actionscript project for sayHello",1356632504615
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632504933
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632505591
+error,log,,,"Error fetching actionscript project for sayHello",1356632505619
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632505933
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1356632506250
+error,log,,,"Error fetching actionscript project for sayHello",1356632506270
+started,bundle,org.eclipse.jst.ws.jaxws.dom.integration,1.0.0.v201004171919,"org.eclipse.jst.ws.jaxws.dom.integration",1356632597568
+started,bundle,org.eclipse.jst.ws.jaxws.dom.ui,1.0.0.v201004171919,"org.eclipse.jst.ws.jaxws.dom.ui",1356632597575
+started,bundle,org.jboss.ide.eclipse.archives.ui,3.2.0.v20111025-0345-H201-Final,"org.jboss.ide.eclipse.archives.ui",1356632597582
+started,bundle,org.jboss.tools.common.model.ui,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common.model.ui",1356632598751
+started,bundle,org.eclipse.jst.servlet.ui,1.1.406.v201109140400,"org.eclipse.jst.servlet.ui",1356632599019
+started,bundle,org.eclipse.wst.html.core,1.1.406.v201109271810,"org.eclipse.wst.html.core",1356632603983
+started,bundle,org.jboss.tools.modeshape.rest,1.1.0.v20111104-1207-H172-Final,"org.jboss.tools.modeshape.rest",1356632606085
+started,bundle,org.eclipse.m2e.core,1.0.0.20110607-2117,"org.eclipse.m2e.core",1356632610506
+started,bundle,org.jboss.tools.jsf.verification,3.1.0.v20111027-1258-H202-Final,"org.jboss.tools.jsf.verification",1356632615165
+started,bundle,org.jboss.tools.jst.web.verification,3.1.0.v20111025-0510-H215-Final,"org.jboss.tools.jst.web.verification",1356632615208
+started,bundle,org.jboss.tools.struts.verification,3.1.0.v20111025-2151-H198-Final,"org.jboss.tools.struts.verification",1356632615227
+started,bundle,org.jboss.tools.struts,3.2.0.v20111025-2151-H198-Final,"org.jboss.tools.struts",1356632615527
+started,bundle,org.eclipse.wst.common.uriresolver,1.1.401.v201004280700,"org.eclipse.wst.common.uriresolver",1356632616044
+error,log,,,"Unable to update index for central|http://repo1.maven.org/maven2",1356632618906
+opened,view,org.eclipse.wst.server.ui,1.1.209.v20111005_1716,"org.eclipse.wst.server.ui.ServersView",1356632618972
+started,bundle,org.jboss.tools.jst.jsp,3.2.1.v20111025-0510-H215-Final,"org.jboss.tools.jst.jsp",1356632618979
+started,bundle,org.jboss.tools.common.text.ext,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common.text.ext",1356632618988
+activated,view,org.eclipse.wst.server.ui,1.1.209.v20111005_1716,"org.eclipse.wst.server.ui.ServersView",1356632619006
+started,bundle,org.eclipse.jst.server.tomcat.ui,1.1.200.v20100418,"org.eclipse.jst.server.tomcat.ui",1356632637907
+started,bundle,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui",1356632638824
+executed,command,org.eclipse.wst.server.ui,1.1.209.v20111005_1716,"org.eclipse.wst.server.run",1356632638854
+started,bundle,org.eclipse.jdt.debug,3.6.1.v20100715_r361,"org.eclipse.jdt.debug",1356632639456
+started,bundle,org.jboss.ide.eclipse.freemarker,1.1.0.v20111025-0320-H192-Final,"org.jboss.ide.eclipse.freemarker",1356632642758
+started,bundle,org.eclipse.m2e.launching,1.0.0.20110607-2117,"org.eclipse.m2e.launching",1356632642760
+started,bundle,org.eclipse.jdt.debug.ui,3.5.2.v20100928a_r362,"org.eclipse.jdt.debug.ui",1356632645986
+opened,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1356632661785
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1356632661917
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1356632719065
+error,log,,,"Error fetching actionscript project for myFriends",1356632719100
+error,log,,,"Error fetching actionscript project for myFriends",1356632719119
+error,log,,,"Error fetching actionscript project for myFriends",1356632719138
+error,log,,,"Error fetching actionscript project for myFriends",1356632719156
+error,log,,,"Error fetching actionscript project for myFriends",1356632719176
+error,log,,,"Error fetching actionscript project for myFriends",1356632719197
+error,log,,,"Error fetching actionscript project for myFriends",1356632719218
+error,log,,,"Error fetching actionscript project for myFriends",1356632719238
+error,log,,,"Error fetching actionscript project for myFriends",1356632719256
+error,log,,,"Error fetching actionscript project for myFriends",1356632719717
+error,log,,,"Error fetching actionscript project for myFriends",1356632722282
+error,log,,,"Error fetching actionscript project for myFriends",1356632722304
+error,log,,,"Error fetching actionscript project for myFriends",1356632722496
+error,log,,,"Error fetching actionscript project for myFriends",1356632722608
+error,log,,,"Error fetching actionscript project for myFriends",1356632722629
+error,log,,,"Error fetching actionscript project for myFriends",1356632722650
+error,log,,,"Error fetching actionscript project for myFriends",1356632722690
+error,log,,,"Error fetching actionscript project for myFriends",1356632722712
+error,log,,,"Error fetching actionscript project for myFriends",1356632722753
+error,log,,,"Error fetching actionscript project for myFriends",1356632722780
+error,log,,,"Error fetching actionscript project for myFriends",1356632723439
+error,log,,,"Error fetching actionscript project for myFriends",1356632723459
+error,log,,,"Error fetching actionscript project for myFriends",1356632723481

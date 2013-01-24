@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;TiUserProfile.java&apos; to &apos;cbm-admin-webservice/src/com.piers.admin.webservice.client.jaxb&apos;&#x0D;&#x0A;- Original project: &apos;cbm-admin-webservice&apos;&#x0D;&#x0A;- Destination element: &apos;cbm-admin-webservice/src/com.piers.admin.webservice.client.jaxb&apos;&#x0D;&#x0A;- Original element: &apos;com.piers.admin.webservice.client.jaxb.TiUserProfile.java&apos;" description="Move compilation unit" destination="/src&lt;com.piers.admin.webservice.client.jaxb" element1="/&lt;com.piers.admin.webservice.client.jaxb{TiUserProfile.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="false" stamp="1336521957791" units="1" version="1.0"/>
+</session>

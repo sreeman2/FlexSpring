@@ -1,0 +1,5 @@
+#Wed Jan 16 14:07:49 EST 2013
+eclipse.preferences.version=1
+activeViewIDs3=org.eclipse.wst.server.ui.ServersView,org.eclipse.ui.navigator.ProjectExplorer,com.adobe.flexbuilder.dcrad.views.DataServicesView
+activeViewIDs2=org.eclipse.ui.console.ConsoleView,org.eclipse.ui.views.ContentOutline,org.eclipse.mylyn.tasks.ui.views.tasks,org.eclipse.jdt.ui.PackageExplorer
+autoViewIDs=com.adobe.flexbuilder.mxml.editor.states.StatesViewer\=unmanaged\=0\=true,com.adobe.flexbuilder.mxml.editor.components.ComponentsView\=design-mxml\=0\=true,com.adobe.flexbuilder.mxml.editor.inspector.view.PropertiesView\=design-mxml;design-css\=0\=true,com.adobe.flexbuilder.as.editor.asdocviewer\=code\=0\=false,com.adobe.flexbuilder.mxml.editor.AppearanceView\=design-mxml\=1\=false

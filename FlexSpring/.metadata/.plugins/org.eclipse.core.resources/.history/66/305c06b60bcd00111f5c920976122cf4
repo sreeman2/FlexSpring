@@ -1,0 +1,831 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <!-- vim: set ts=2 et sw=2 ai: -->
+
+  <parent>
+    <groupId>com.globant.cbm</groupId>
+    <artifactId>dev</artifactId>
+    <version>3.0-FINAL-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.globant.cbm</groupId>
+  <artifactId>ti3-web</artifactId>
+  <packaging>war</packaging>
+  <name>Trade Intelligence version 3 - web</name>
+
+  <dependencies>
+    <!-- Test only dependencies -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.easymock</groupId>
+      <artifactId>easymockclassextension</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>htmlunit</groupId>
+      <artifactId>htmlunit</artifactId>
+    </dependency>
+    
+	<dependency>
+      <groupId>org.openqa.selenium.client-drivers</groupId>
+      <artifactId>selenium-java-client-driver</artifactId>
+    </dependency>
+    
+    <dependency>
+        <groupId>hsqldb</groupId>
+        <artifactId>hsqldb</artifactId>
+        <version>1.8.0.7</version>
+        <scope>test</scope>
+      </dependency>
+      
+    <dependency>
+      <groupId>com.globant.orion</groupId>
+      <artifactId>orion-core</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>xstream</groupId>
+	      <artifactId>xstream</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-validator</groupId>
+      <artifactId>commons-validator</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+
+    <!-- Nedded by htmlunit class -->
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+    </dependency>
+
+	<dependency>
+	  <groupId>commons-io</groupId>
+  	  <artifactId>commons-io</artifactId>
+	</dependency>
+	
+    <!-- Runtime dependencies -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-annotations</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-commons-annotations</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>3.0.0.ga</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>persistence-api</artifactId>
+    </dependency>
+
+    <!-- Be careful. This version of the mysql jdbc driver is GPL. -->
+    <dependency>
+      <groupId>com.oracle</groupId>
+	  <artifactId>ojdbc6</artifactId>
+    </dependency>
+    
+    <dependency>
+    	<groupId>commons-dbcp</groupId>
+    	<artifactId>commons-dbcp</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>javassist</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+    </dependency>
+    
+    <dependency>
+        <groupId>aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>1.5.0</version>
+    </dependency>
+    <!-- This is due to acegi depending on a package from spring 1 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.acegisecurity</groupId>
+      <artifactId>acegi-security</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>opensymphony</groupId>
+      <artifactId>sitemesh</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>cas</groupId>
+      <artifactId>casclient</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+    </dependency>
+
+    <!-- Needed for CAS server integration. -->
+    <dependency>
+      <groupId>quartz</groupId>
+      <artifactId>quartz</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+    </dependency>
+
+    <!-- This and taglibs.standard are needed by tomcat. -->
+    <!--<dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>taglibs</groupId>
+      <artifactId>standard</artifactId>
+    </dependency>-->
+    <!-- End of cas dependencies -->
+
+    <!-- Compile only dependencies -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-tools</artifactId>
+    </dependency>
+
+    <!-- Provided by the container -->
+    <!--<dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+    </dependency>-->
+
+    <!-- Provided by the container -->
+    <!--<dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jsp-api</artifactId>
+    </dependency>-->
+
+    <dependency>
+    	<groupId>javax.mail</groupId>
+    	<artifactId>mail</artifactId>
+    </dependency>
+
+    <dependency>
+    	<groupId>javax.activation</groupId>
+    	<artifactId>activation</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.globant.anubis</groupId>
+      <artifactId>anubis-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.globant.anubis</groupId>
+      <artifactId>anubis-classic-menu</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.globant.anubis</groupId>
+      <artifactId>anubis-tools</artifactId>
+    </dependency>
+
+    <dependency>
+    	<groupId>com.globant.anubis</groupId>
+    	<artifactId>anubis-ajax</artifactId>
+    </dependency>
+    
+    <dependency>
+        <groupId>com.jamonapi</groupId>
+        <artifactId>jamon</artifactId>
+    </dependency>
+
+<!-- 
+    <dependency>
+      <groupId>com.globant.anubis</groupId>
+      <artifactId>anubis-trails</artifactId>
+    </dependency>
+ -->
+    <dependency>
+      <groupId>${groupId}</groupId>
+      <artifactId>ti3-style</artifactId>
+      <version>${version}</version>
+    </dependency>  
+
+    <dependency>
+      <groupId>${groupId}</groupId>
+      <artifactId>search-service-api</artifactId>
+      <version>${version}</version>
+    </dependency>  
+
+    <dependency>
+      <groupId>${groupId}</groupId>
+      <artifactId>report-service-api</artifactId>
+      <version>${version}</version>
+    </dependency>
+
+    <!--This may be removed in order to do a separate deployment -->
+    <dependency>
+      <groupId>${groupId}</groupId>
+      <artifactId>search-service-impl</artifactId>
+      <version>${version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>${groupId}</groupId>
+      <artifactId>report-service-impl</artifactId>
+      <version>${version}</version>
+    </dependency> 
+
+    <!--Required by ResultExporter -->
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi</artifactId>
+	</dependency>
+    
+	<dependency>
+		<groupId>net.sf.opencsv</groupId>
+		<artifactId>opencsv</artifactId>
+	</dependency>
+    
+	<dependency>
+		<groupId>com.linuxense.javadbf</groupId>
+		<artifactId>javadbf</artifactId>
+	</dependency>
+
+  <dependency>
+    <groupId>ar.com.fdvs</groupId>
+    <artifactId>DynamicJasper</artifactId>
+    <version>2.0.8</version>
+  </dependency>
+  
+    <dependency>
+      <groupId>com.cbizmedia.admin</groupId>
+      <artifactId>admin-client</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml.ws</groupId>
+      <artifactId>jaxws-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml.stream</groupId>
+      <artifactId>stax-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.jws</groupId>
+      <artifactId>jws</artifactId>
+    </dependency>
+
+    <!--<dependency>
+      <groupId>jaxen</groupId>
+      <artifactId>jaxen</artifactId>
+    </dependency>-->
+
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springmodules</groupId>
+      <artifactId>spring-modules-cache</artifactId>
+    </dependency>
+    
+     <dependency>
+        <groupId>net.sf.jsr107cache</groupId>
+        <artifactId>jsr107cache</artifactId>
+      </dependency>
+
+	<!-- <dependency>
+	  <groupId>axis</groupId>
+  	  <artifactId>axis</artifactId>
+  	  <version>1.3</version>
+	</dependency>  --> 
+	
+	<dependency>
+	  <groupId>iReport</groupId>
+  <artifactId>iReport</artifactId>
+  <version>1.3.3</version>
+	</dependency> 
+	
+	<dependency>
+		  <groupId>iReport</groupId>
+  <artifactId>iReport</artifactId>
+  <version>1.3.3</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>castor</groupId>
+		<artifactId>castor</artifactId>
+		<version>1.0</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>flexdock</groupId>
+  <artifactId>flexdock</artifactId>
+  <version>0.4.1</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.jaspersoft.jasperserver.api.common</groupId>
+  <artifactId>jasperserver-api-common</artifactId>
+  <version>2.1.0</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.jaspersoft.jasperserver.api.common.impl</groupId>
+  <artifactId>jasperserver-api-common-impl</artifactId>
+  <version>2.1.0</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.jaspersoft.jasperserver.api.metadata.impl</groupId>
+  <artifactId>jasperserver-api-metadata-impl</artifactId>
+  <version>2.1.0</version>
+	</dependency>
+	
+	<dependency>
+        <groupId>commons-httpclient</groupId>
+        <artifactId>commons-httpclient</artifactId>
+        <version>3.0.1</version>
+      </dependency>
+	
+  </dependencies>
+
+  <build>
+    <finalName>ti3-web</finalName>
+
+    <!-- Filters the anubis.properties resource. -->
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>ti3.properties</include>
+          <include>search-datasources.properties</include>
+        </includes>
+      </testResource>
+      <testResource>
+        <directory>src/test/resources</directory>
+        <excludes>
+          <exclude>ti3.properties</exclude>
+          <exclude>search-datasources.properties</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+    <resources>
+    	<resource>
+    		<directory>src/main/resources</directory>
+        	<filtering>true</filtering>
+        	<includes>
+          		<include>hibernate.cfg.xml</include>
+        	</includes>
+    	</resource>
+    	<resource>
+    		<directory>src/main/resources</directory>
+    		<includes>
+    			<include>**/*</include>
+    		</includes>
+        	<excludes>
+          		<exclude>hibernate.cfg.xml</exclude>
+        	</excludes>
+    	</resource>
+    </resources>
+
+    <plugins>
+
+      <!-- Defines two sets of tests, one for normal unit tests and the other
+      for functional testing. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <!-- Excludes all the tests from the default surefire execution
+          phase. -->
+          <includes><include /></includes>
+        </configuration>
+        <executions>
+          <!-- We use the surefire plugin to set up the database. This is bound
+          to the test-compile phase. We could not manage to use
+          exec-maven-plugin. -->
+          <execution>
+            <id>Tests setup</id>
+            <phase>test-compile</phase>
+            <configuration>
+              <includes>
+                <include>com/globant/cbm/ti3/testsupport/database/TestDbSupport.java</include>
+              </includes>
+            </configuration>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+          <!-- Unit tests that do not require the web application deployed in
+          the container. This is bound to the test phase. -->
+          <execution>
+            <id>Tests</id>
+            <phase>test</phase>
+            <configuration>
+              <excludes>
+                <exclude>**/functionaltest/**/*.java</exclude>
+              </excludes>
+              <includes>
+                <include>**/*Test.java</include>
+              </includes>
+            </configuration>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+          <!-- Unit tests that require the web application deployed in the
+          container. This is bound to the integration-test phase. -->
+          <execution>
+            <id>Functional tests</id>
+            <phase>integration-test</phase>
+            <configuration>
+              <excludes>
+                <exclude>${selenium-test-exclusion-list}</exclude>
+                <exclude>**/functionaltest/UsersTest.java</exclude>
+              </excludes>
+              <includes>
+                <include>**/functionaltest/**/*Test.java</include>
+              </includes>
+            </configuration>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>Initialization</id>
+            <phase>pre-integration-test</phase>
+            <configuration>
+              <includes>
+                <include>com/globant/cbm/ti3/testsupport/database/TestDbSupportPreFunctional.java</include>
+              </includes>
+            </configuration>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>maven-jetty-plugin</artifactId>
+        <version>6.1.5</version>
+        <dependencies>
+          <!--<dependency>
+            <groupId>axis</groupId>
+            <artifactId>axis-jaxrpc</artifactId>
+            <version>1.3</version>
+            <scope>compile</scope>
+          </dependency>
+          <dependency>
+            <groupId>axis</groupId>
+            <artifactId>axis-saaj</artifactId>
+            <version>1.3</version>
+            <scope>compile</scope>
+          </dependency>
+          <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.6.2</version>
+            <scope>compile</scope>
+          </dependency>-->
+          <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.14</version>
+            <scope>compile</scope>
+          </dependency>          
+        </dependencies>
+        <configuration>
+          <contextPath>ti3-web</contextPath>
+          <connectors>
+            <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+              <port>8098</port>
+              <maxIdleTime>60000</maxIdleTime>
+              <headerBufferSize>8192</headerBufferSize>       
+            </connector>
+          </connectors>
+          <useTestClasspath>true</useTestClasspath>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <systemProperties>
+            <systemProperty>
+              <name>com.globant.cbm.ti3.crudPortSpecification</name>
+              <value>+1</value>
+            </systemProperty>
+         </systemProperties>
+        </configuration>
+      </plugin>
+	  
+	   <!-- Generates the ddl file. -->
+      <!-- Tried using maven groovy plugin, but it threw an error with mvn
+      jetty:run. -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+
+        <dependencies>
+          <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.4</version>
+            <scope>compile</scope>
+          </dependency>
+        </dependencies>
+
+        <executions>
+          <execution>
+            <phase>process-test-resources</phase>
+            <goals><goal>java</goal></goals>
+          </execution>
+        </executions>
+
+        <configuration>
+          <includeProjectDependencies>true</includeProjectDependencies>
+          <includePluginDependencies>true</includePluginDependencies>
+          <cleanupDaemonThreads>false</cleanupDaemonThreads>
+          <keepAlive>false</keepAlive>
+          <classpathScope>test</classpathScope>
+
+          <executableDependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+          </executableDependency>
+
+          <mainClass>com.globant.anubis.tools.HibernateUtils</mainClass>
+          <arguments>
+            <!-- the three / are for compatibility with windows: file:///c:/..-->
+            
+            <argument>
+              file:///${project.basedir}/src/main/webapp/WEB-INF/applicationContext.xml,
+              file:///${project.basedir}/src/main/webapp/WEB-INF/applicationContextSecurity.xml
+            </argument>
+            <argument>${project.basedir}/target/ti3-web.ddl</argument>
+          </arguments>
+
+        </configuration>
+      </plugin>
+      
+    </plugins>
+  </build>
+
+  <profiles>
+
+    <!-- Wtih this profile active, cargo:start starts tomcat and deploys the
+    expanded web application in it, listening at port 8098. You must first run
+    mvn war:inplace. -->
+    <profile>
+      <id>cargo-inplace</id>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven2-plugin</artifactId>
+            <version>0.3.1</version>
+            <configuration>
+              <container>
+                <containerId>tomcat5x</containerId>
+                <zipUrlInstaller>
+                  <url>http://maven.globant.com/tools/containers/apache-tomcat-5.5.17.zip</url>
+                </zipUrlInstaller>
+                <dependencies>
+                  <dependency>
+                    <location>${basedir}/target/test-classes</location>
+                  </dependency>
+                </dependencies>
+              </container>
+              <configuration>
+                <home>${project.build.directory}/tomcat</home>
+                <properties>
+                  <reloadable>true</reloadable>
+                  <cargo.servlet.port>8098</cargo.servlet.port>
+                </properties>
+                <deployables>
+                  <deployable>
+                    <!-- Deploys the exploded webapp. -->
+                    <location>${basedir}/src/main/webapp</location>
+                    <properties>
+                      <context>ti3-web</context>
+                    </properties>
+                  </deployable>
+                </deployables>
+              </configuration>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- A test configuration with selenium. Activate with -P selenium-test -->
+    <profile>
+      <id>selenium-test</id>
+
+      <build>
+	    <plugins>
+	        
+	              <!-- Starts tomcat and deploys the web application in it, listening at
+	      port 8099.  The plugin is also bounded to the pre-integration-test and
+	      post-integration-test phase to start and stop the deployed application to
+	      run the integration tests. -->
+	      <plugin>
+	        <groupId>org.codehaus.cargo</groupId>
+	        <artifactId>cargo-maven2-plugin</artifactId>
+	        <version>0.3.1</version>
+	        <executions>
+	
+	          <execution>
+	            <id>start-container</id>
+	            <phase>pre-integration-test</phase>
+	            <goals>
+	              <goal>start</goal>
+	            </goals>
+	            <configuration>
+	              <wait>false</wait>
+	              <configuration>
+	                <properties>
+	                  <reloadable>true</reloadable>
+	                  <cargo.servlet.port>8099</cargo.servlet.port>
+	                </properties>
+	                <deployables>
+	                  <deployable>
+	                    <groupId>${project.groupId}</groupId>
+	                    <artifactId>${project.artifactId}</artifactId>
+	                    <type>war</type>
+	                  </deployable>
+	                </deployables>
+	              </configuration>
+	            </configuration>
+	          </execution>
+	
+	          <!-- Stops the container after the integration tests -->
+	          <execution>
+	            <id>stop-container</id>
+	            <phase>post-integration-test</phase>
+	            <goals>
+	              <goal>stop</goal>
+	            </goals>
+	            <configuration>
+	              <wait>true</wait>
+	              <configuration>
+	                <properties>
+	                  <cargo.servlet.port>8099</cargo.servlet.port>
+	                </properties>
+	              </configuration>
+	            </configuration>
+	          </execution>
+	
+	        </executions>
+	
+	        <configuration>
+	
+	          <container>
+	            <containerId>tomcat5x</containerId>
+	            <zipUrlInstaller>
+	              <url>http://maven.corp.globant.com/tools/containers/apache-tomcat-5.5.17.zip</url>
+	            </zipUrlInstaller>
+	            <dependencies>
+	              <dependency>
+	                <location>${basedir}/target/test-classes</location>
+	              </dependency>
+	            </dependencies>
+	          </container>
+	          <configuration>
+	            <properties>
+	              <cargo.servlet.port>8099</cargo.servlet.port>
+	            </properties>
+	          </configuration>
+	
+	        </configuration>
+	
+	      </plugin>
+        
+        
+          <!-- Selenium Maven plugin. -->
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>selenium-maven-plugin</artifactId>
+            <version>1.0-beta-2</version>
+            <dependencies>
+              <dependency>
+                <groupId>org.openqa.selenium.server</groupId>
+                <artifactId>selenium-server</artifactId>
+                <version>0.9.2</version>
+              </dependency>
+            </dependencies>
+            <executions>
+            <execution>
+                <phase>pre-integration-test</phase>
+                <goals>
+                  <goal>start-server</goal>
+                </goals>
+                <configuration>
+                  <background>true</background>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>selenium-exclude-test</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <selenium-test-exclusion-list>**/functionaltest/**/*.java</selenium-test-exclusion-list>
+      </properties>
+    </profile>
+  </profiles>
+
+</project>

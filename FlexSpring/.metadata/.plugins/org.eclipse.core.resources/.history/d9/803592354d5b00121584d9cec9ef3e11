@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:flex="http://www.springframework.org/schema/flex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/flex
+http://www.springframework.org/schema/flex/spring-flex-1.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/jdbc
+http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+	<flex:message-broker>
+		<flex:remoting-service default-channels="my-amf" />
+	</flex:message-broker>
+	<context:component-scan base-package="flex" />
+	<context:component-scan base-package="flex.jersey.resource" />
+	<context:component-scan base-package="flex.dao" />
+	
+	<tx:annotation-driven />
+	<context:annotation-config/>
+<!-- 	<jdbc:embedded-database id="dataSource" type="H2" /> -->
+	<!-- H2 database configuration
+	  <bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="flex" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+	</bean>
+	-->
+	 
+	<bean id="GTCoreStatingDataSource" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource"   destroy-method="close">
+			<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+			<property name="url" value="jdbc:sqlserver://10.31.18.132:1433;databasename=GTCore_Staging" />
+			<property name="username" value="appuser" />
+			<property name="password" value="bizdev02" />  
+	</bean>
+	
+<!-- SQLServer datasource config Start 	
+	<bean id="dataSource" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource"   destroy-method="close">
+			<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+			<property name="url" value="jdbc:sqlserver://10.31.18.132:1433;databasename=SCREEN_TEST" />
+			<property name="username" value="appuser" />
+			<property name="password" value="bizdev02" />  
+	</bean>
+ SQLServer datasource config end -->
+
+<!-- MYSQL datasource config Start -->	
+	<bean id="dataSource" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource"   destroy-method="close">
+			<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+			<property name="url" value="jdbc:mysql://localhost:3306/Screen_test" />
+			<property name="username" value="root" />
+			<property name="password" value="Omsairam" />  
+	</bean>
+	<bean id="jdbcMysqlTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource"><ref bean="dataSource" /></property>
+	</bean>
+<!-- MYSQL datasource config end -->	
+
+
+ <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource"><ref bean="dataSource" /></property>
+	</bean>
+	
+ <bean id="jdbcTemplateGTCore" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource"><ref bean="GTCoreStatingDataSource" /></property>
+	</bean>	
+
+<bean id="commodityDaoImpl" class="flex.dao.CommodityDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+</bean>
+ 
+<bean id="portDaoImpl" class="flex.dao.PortDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+</bean>
+
+<bean id="portCountryDaoImpl" class="flex.dao.PortCountryDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+</bean>
+
+<!-- For Jersey REST Resources -->
+<bean id="wservices" class="flex.jersey.resource.ServicesImpl"/>
+ 
+<bean id="wservices1" class="flex.jersey.resource.CommodityServicesImpl">
+	<property name="dataSource" ref="dataSource"/>
+</bean>
+
+<bean id="wservices2" class="flex.jersey.resource.PortServiceImpl"/>
+<bean id="wservices3" class="flex.jersey.resource.PortCountryServiceImpl"/>	
+
+	<bean id="commodityBean" class="flex.dao.CommodityBean">
+		<constructor-arg><ref bean="dataSource"/></constructor-arg>
+		<!-- <property name="dataSource" ref="dataSource" />-->
+	</bean>
+    
+
+
+ 
+<!-- This is Hibernate3 to invoke Session factory
+ <bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="flex" />
+		<property name="hibernateProperties">
+			<props>
+					<prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect
+					</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect
+				</prop>
+<!--			<prop key="hibernate.hbm2ddl.auto">create</prop> -->
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean> -->
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="flex" />
+		<property name="hibernateProperties">
+			<props>
+					<prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect
+					</prop>
+			<!--  	<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect
+				</prop>-->
+<!-- 				<prop key="hibernate.hbm2ddl.auto">create</prop>-->
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>

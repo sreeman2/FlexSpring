@@ -1,0 +1,34 @@
+package com.globant.cbm.ti3.security;
+
+import org.acegisecurity.Authentication;
+import org.acegisecurity.ConfigAttributeDefinition;
+
+import com.globant.cbm.ti3.integration.SubscriptionInformationAccessor;
+
+/**
+ * Class that validates if the user is a primary user
+ * @author oscar.lopez
+ *
+ */
+public class ValidatePrimaryUser
+		extends AbstractFilterInvocationSecurityRule
+{
+	public ValidatePrimaryUser(
+			SubscriptionInformationAccessor subscriptionAccessor) {
+		super(subscriptionAccessor);
+	}
+
+
+	public int vote(final Authentication authentication, final Object object,
+		      final ConfigAttributeDefinition config) {
+		if (!supports(config)) {
+			return ACCESS_ABSTAIN;
+		}
+		String username = extractUsername(authentication);
+		if (getAdminAccessor().isPrimaryServiceLevel(username)) {
+			return ACCESS_GRANTED;
+		}
+		return ACCESS_DENIED;
+	}
+
+}

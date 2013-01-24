@@ -1,0 +1,4 @@
+#Sat Jan 19 18:18:48 EST 2013
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="commodityDaoImpl"/>\r\n<expression enabled\="true" text\=""/>\r\n</watchExpressions>\r\n
+eclipse.preferences.version=1
+org.eclipse.debug.core.PREF_DELETE_CONFIGS_ON_PROJECT_DELETE=true

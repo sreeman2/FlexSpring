@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:services="services.*">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			protected function dataGrid_creationCompleteHandler(event:FlexEvent=null):void
+			{
+				getFriendsResult.token = friendService.getFriends();
+			}
+			
+			
+			protected function button_clickHandler(event:MouseEvent):void
+			{
+				createFriendResult.token = friendService.createFriend(arg0TextInput.text);
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:CallResponder id="getFriendsResult"/>
+		<services:FriendService id="friendService"    endpoint="http://localhost:8080/flexspring/messagebroker/amf"/>
+		<s:CallResponder id="createFriendResult"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<mx:Form defaultButton="{button}" x="88" y="45">
+		<mx:FormItem label="Name">
+			<s:TextInput id="arg0TextInput"/>
+		</mx:FormItem>
+		<s:Button label="CreateFriend" id="button" click="button_clickHandler(event)"/>
+	</mx:Form>
+	
+	<mx:DataGrid x="89" y="156" id="dataGrid" creationComplete="dataGrid_creationCompleteHandler(event)" dataProvider="{getFriendsResult.lastResult}">
+		<mx:columns>
+			<mx:DataGridColumn headerText="id" dataField="id"/>
+			<mx:DataGridColumn headerText="name" dataField="name"/>
+		</mx:columns>
+	</mx:DataGrid>
+</s:Application>

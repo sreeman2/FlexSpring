@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package flex.dao;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import flex.dao.mapper.PortCountryMapper;
+import flex.jersey.PortCountryBean;
+
+/**
+ * @author skasi
+ *
+ */
+public class PortCountryDaoImpl implements IPortCountryDao {
+
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplateGTCore;
+	@Autowired
+	private DataSource dataSource;
+	/* (non-Javadoc)
+	 * @see flex.dao.IPortCountryDao#showAllPortCountries()
+	 */
+	@Override
+	public List<PortCountryBean> getAllPortCountries() {
+		// TODO Auto-generated method stub
+		jdbcTemplateGTCore = new JdbcTemplate(this.dataSource);
+		return this.jdbcTemplateGTCore.query(
+				" Select Distinct P.code, c.isoAlpha2Code "+
+				" From dw2_Port P , dw2_Country c where  (p.Country_ID = c.Country_ID) "+
+				" Whereand  P.code !=''", new PortCountryMapper()); 
+		}
+	/**
+	 * @param dataSource the dataSource to set
+	 */
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+}

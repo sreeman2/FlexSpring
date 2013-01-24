@@ -1,0 +1,5 @@
+package flex.dao;
+
+public interface IPortDao {
+
+}
